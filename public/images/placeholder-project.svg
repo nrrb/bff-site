@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#221F28"/>
+  <rect x="0.5" y="0.5" width="639" height="399" fill="none" stroke="#8A94A6" stroke-opacity="0.3"/>
+  <text x="320" y="190" font-family="monospace" font-size="18" fill="#8A94A6" text-anchor="middle">case study</text>
+  <text x="320" y="216" font-family="monospace" font-size="18" fill="#8A94A6" text-anchor="middle">coming soon</text>
+</svg>

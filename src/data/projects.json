@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Project title here",
+    "description": "One or two sentences on what it does and who it's for.",
+    "image": "/images/placeholder-project.svg",
+    "tags": ["React", "Node"],
+    "link": ""
+  },
+  {
+    "title": "Project title here",
+    "description": "One or two sentences on what it does and who it's for.",
+    "image": "/images/placeholder-project.svg",
+    "tags": ["Vue", "AI Tooling"],
+    "link": ""
+  },
+  {
+    "title": "Project title here",
+    "description": "One or two sentences on what it does and who it's for.",
+    "image": "/images/placeholder-project.svg",
+    "tags": ["Design", "Three.js"],
+    "link": ""
+  }
+]
