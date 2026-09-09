@@ -1,51 +1,17 @@
 export default function Hero() {
-  return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pb-20 pt-16 md:pb-28 md:pt-24">
-      <div className="grid items-center gap-12 md:grid-cols-[1.2fr_0.8fr]">
-        <div>
-          <p className="mb-4 font-mono text-sm text-steel">
-            <span className="text-rose">function</span> bigFriendlyFunction(you) {'{'}
-          </p>
-          <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight text-paper sm:text-5xl md:text-6xl">
-            Web apps, desktop apps,
-            <br />
-            design, and AI tooling:
-            <br />
-            <span className="text-rose">built by one big friendly function.</span>
-          </h1>
-          <p className="mt-4 font-mono text-sm text-steel">{'  return solved;'}<br />{'}'}</p>
-
-          <p className="mt-8 max-w-lg text-lg text-paper/75">
-            Hi there! I'm Nicholas Bennett.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="rounded-xl2 bg-rose px-6 py-3 font-display text-sm font-semibold text-ink transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Get in touch
-            </a>
-            <a
-              href="#portfolio"
-              className="rounded-xl2 border border-white/15 px-6 py-3 font-display text-sm font-semibold text-paper transition-colors hover:border-rose hover:text-rose"
-            >
-              See the work
-            </a>
-          </div>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-xs">
-          <div className="aspect-[4/5] overflow-hidden rounded-xl2 border border-white/10 bg-ink-soft">
-            {/* Replace src with your actual portrait photo in /public/images/ */}
-            <img
-              src="/images/portrait.jpg"
-              alt="Portrait of Nicholas"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
+  return <section id="top" className="section-shell pb-20 pt-16 md:pb-28 md:pt-24">
+    <div className="grid items-center gap-12 md:grid-cols-[1.5fr_0.8fr]">
+      <div>
+        <p className="eyebrow"><span className="text-rose">function</span> bigFriendlyFunction(you)</p>
+        <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Websites and custom tools, <span className="text-rose">built around the way you work.</span></h1>
+        <p className="mt-7 max-w-xl text-lg leading-relaxed text-paper/80">I’m Nicholas Bennett, the developer behind Big Friendly Function. I build distinctive websites, improve existing apps, and turn repetitive tasks into useful software.</p>
+        <div className="mt-8 flex flex-wrap gap-4"><a href="#contact" className="button-primary">Tell me about your project</a><a href="#portfolio" className="button-secondary">Explore my work</a></div>
       </div>
-    </section>
-  );
+      <figure className="mx-auto w-full max-w-xs">
+        {/* TODO_MEDIA: Replace with a new coworking-office portrait, preserving the existing photograph until supplied. */}
+        <img src="/images/portrait.jpg" alt="Nicholas Bennett" className="h-auto w-full rounded-xl2 border border-white/10" />
+        <figcaption className="mt-4 font-mono text-xs text-steel">Nicholas Bennett / Baltimore, MD</figcaption>
+      </figure>
+    </div>
+  </section>;
 }

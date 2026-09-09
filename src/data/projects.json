@@ -1,23 +1,281 @@
 [
   {
-    "title": "Project title here",
-    "description": "One or two sentences on what it does and who it's for.",
-    "image": "/images/placeholder-project.svg",
-    "tags": ["React", "Node"],
-    "link": ""
+    "slug": "og-blacman",
+    "title": "OG Blacman",
+    "description": "An artist website with dedicated desktop and mobile experiences.",
+    "label": "Artist website",
+    "source": "https://github.com/nrrb/ogblacman",
+    "live": "https://www.ogblacman.com/",
+    "problem": "An artist’s website needs to express a distinctive identity while giving visitors a way to explore music and media on the device they have with them.",
+    "role": "I built the artist website, including dedicated desktop and mobile experiences. Credits for supplied art, music, and other collaborators still need to be added.",
+    "decisions": [
+      {
+        "decision": "Dedicated desktop and mobile compositions",
+        "purpose": "Give the artist’s identity room to work at different screen sizes."
+      },
+      {
+        "decision": "Music and media within the site",
+        "purpose": "Let visitors explore the artist’s work in context."
+      }
+    ],
+    "delivered": [
+      "An artist website available at ogblacman.com, with dedicated desktop and mobile experiences."
+    ],
+    "planned": [
+      "An annotated desktop/mobile design walkthrough, starting with static images and visible explanations."
+    ],
+    "media": [
+      {
+        "src": null,
+        "assetPath": "/images/projects/og-blacman/desktop-hero.png",
+        "title": "Desktop hero screenshot",
+        "caption": "Show the real desktop composition and artist identity.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      },
+      {
+        "src": null,
+        "assetPath": "/images/projects/og-blacman/phone-player.png",
+        "title": "Phone layout and music player",
+        "caption": "Show how the mobile composition presents music and playback controls.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      }
+    ],
+    "contentTodos": [
+      "TODO_CONTENT: Confirm music-player behavior, signup provider, and any other integrations before describing them as delivered.",
+      "TODO_CONTENT: Supply role boundaries, collaborator credits, and the desktop/mobile walkthrough explanations."
+    ],
+    "contact": "Need a website that feels like you? Tell me about your identity, content, and the people you want to reach."
   },
   {
-    "title": "Project title here",
-    "description": "One or two sentences on what it does and who it's for.",
-    "image": "/images/placeholder-project.svg",
-    "tags": ["Vue", "AI Tooling"],
-    "link": ""
+    "slug": "medium-talk",
+    "title": "Medium Talk",
+    "description": "A conversation app I built for a public picnic I hosted through Meetup in a Baltimore park, helping strangers get to know one another.",
+    "label": "Independent community project",
+    "source": "https://github.com/nrrb/mediumtalk",
+    "live": "https://mediumtalk.org/",
+    "problem": "Strangers meeting at a public picnic need a starting point for conversation. I hosted the event through Meetup in a Baltimore park and built an app to support getting to know one another.",
+    "role": "I organized the picnic and built Medium Talk to support conversation at the event.",
+    "decisions": [
+      {
+        "decision": "An app built around conversation",
+        "purpose": "Give people meeting for the first time a shared starting point."
+      },
+      {
+        "decision": "A tool connected to an in-person event",
+        "purpose": "Support the social setting I was organizing."
+      }
+    ],
+    "delivered": [
+      "A conversation app, available at mediumtalk.org, built for the public picnic I hosted."
+    ],
+    "planned": [],
+    "media": [
+      {
+        "src": null,
+        "assetPath": "/images/projects/medium-talk/conversation-prompt.png",
+        "title": "Phone view with a real conversation prompt",
+        "caption": "Show an actual prompt from the app, with enough interface context to understand how it is used.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      }
+    ],
+    "contentTodos": [
+      "TODO_CONTENT: Describe the actual prompt flow and implementation choices. Attendance, feedback, and measured outcomes have not been supplied."
+    ],
+    "contact": "Have an idea that brings people together? Tell me about the setting and how software could help."
   },
   {
-    "title": "Project title here",
-    "description": "One or two sentences on what it does and who it's for.",
-    "image": "/images/placeholder-project.svg",
-    "tags": ["Design", "Three.js"],
-    "link": ""
+    "slug": "kellogg-matcher",
+    "title": "Kellogg Board Fellows Matcher",
+    "description": "A tool I originally built to match fellows to placements using ranked preferences.",
+    "label": "Original tool / independent refresh planned",
+    "source": "https://github.com/nrrb/internship-matcher",
+    "live": null,
+    "problem": "The original organizational task was to match fellows to placements using ranked preferences. A matching tool provides a way to work through those preferences and produce placement results.",
+    "role": "I originally built the tool, which was used in a more rudimentary form. My repository is a fork of the organization’s project. Any future portfolio refresh is independent; it is not presented as commissioned or adopted by Kellogg.",
+    "decisions": [
+      {
+        "decision": "Ranked preferences as the matching input",
+        "purpose": "Base placement matching on the preferences provided."
+      }
+    ],
+    "delivered": [
+      "The original, more rudimentary matching tool was used. The organization’s repository is linked separately for attribution."
+    ],
+    "planned": [
+      "An independent portfolio refresh. It has not been completed or adopted by Kellogg."
+    ],
+    "media": [
+      {
+        "src": null,
+        "assetPath": "/images/projects/kellogg-matcher/original-interface.png",
+        "title": "Original matching interface",
+        "caption": "Show the original tool, using fictional fellows and placements.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      },
+      {
+        "src": null,
+        "assetPath": "/images/projects/kellogg-matcher/refreshed-interface.png",
+        "title": "Planned replacement interface",
+        "caption": "Reserved for the independent refresh once it exists. This is not a delivered interface.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      },
+      {
+        "src": null,
+        "assetPath": "/images/projects/kellogg-matcher/matching-results.png",
+        "title": "Sample matching results",
+        "caption": "Use fictional data only; show the relationship between ranked input and placement output.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      }
+    ],
+    "contentTodos": [
+      "TODO_CONTENT: Confirm my original contribution boundaries and organizational collaborators.",
+      "TODO_CONTENT: Document the original preference-input format, matching rules, and export behavior."
+    ],
+    "contact": "Working through preferences or placement data by hand? Tell me about the rules and the output you need.",
+    "originalSource": "https://github.com/nukellogg/kbfmatcher"
+  },
+  {
+    "slug": "poster-slicer",
+    "title": "Poster Slicer",
+    "description": "Turn an image into a larger poster printed across ordinary sheets of paper.",
+    "label": "Independent tool / interface refresh planned",
+    "source": "https://github.com/nrrb/poster-slicer",
+    "live": "https://nrrb.github.io/poster-slicer/",
+    "problem": "Printing a large image does not always mean using a large-format printer. This tool is for people who want to assemble a poster from ordinary sheets of paper.",
+    "role": "I built Poster Slicer as an independent tool for turning an image into a printable multi-page poster.",
+    "decisions": [
+      {
+        "decision": "Split an image across ordinary paper sheets",
+        "purpose": "Make a larger poster possible with a standard paper format."
+      }
+    ],
+    "delivered": [
+      "The current image-to-poster tool is available online."
+    ],
+    "planned": [
+      "An interface refresh. Before-and-after comparisons will be added once the refresh exists."
+    ],
+    "media": [
+      {
+        "src": null,
+        "assetPath": "/images/projects/poster-slicer/page-grid.png",
+        "title": "Current page-grid preview",
+        "caption": "Show a real image divided into the pages used to make the poster.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      },
+      {
+        "src": null,
+        "assetPath": "/images/projects/poster-slicer/exported-pages.png",
+        "title": "Exported poster pages",
+        "caption": "Show real output from the current tool, using an image suitable for public display.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      }
+    ],
+    "contentTodos": [
+      "TODO_CONTENT: Verify image input, scale and paper settings, preview controls, and export format."
+    ],
+    "contact": "Have a repetitive image or document task? Tell me about your inputs and the finished output you need."
+  },
+  {
+    "slug": "rekordbox-bass-notes",
+    "title": "Rekordbox Bass Notes",
+    "description": "Profiles the bass characteristics of music and writes results directly into the Rekordbox database, helping DJs identify tracks with strong low-end energy.",
+    "label": "DJ workflow tool",
+    "source": "https://github.com/nrrb/rekordbox-bass-notes",
+    "live": null,
+    "problem": "DJs looking for tracks with strong low-end energy need information they can use in their existing music-library workflow. This tool connects bass analysis to Rekordbox.",
+    "role": "I built a tool that profiles bass characteristics and writes the results directly into the Rekordbox database.",
+    "decisions": [
+      {
+        "decision": "Bass-focused analysis",
+        "purpose": "Help DJs identify tracks with strong low-end energy."
+      },
+      {
+        "decision": "Results written into the Rekordbox database",
+        "purpose": "Put the analysis into the existing DJ workflow."
+      }
+    ],
+    "delivered": [
+      "A bass-profiling tool with direct Rekordbox database integration."
+    ],
+    "planned": [],
+    "media": [
+      {
+        "src": null,
+        "assetPath": "/images/projects/rekordbox-bass-notes/analysis-output.png",
+        "title": "Bass analysis output",
+        "caption": "Show actual output with suitable sample track data.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      },
+      {
+        "src": null,
+        "assetPath": "/images/projects/rekordbox-bass-notes/rekordbox-notes.png",
+        "title": "Resulting notes in Rekordbox",
+        "caption": "Show how the written results appear in Rekordbox, using suitable sample track data.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      }
+    ],
+    "contentTodos": [
+      "TODO_CONTENT: Confirm the analysis fields, database fields, setup requirements, and supported versions before publishing usage instructions. No compatibility or performance guarantees are supplied."
+    ],
+    "contact": "Need a custom tool to fit an existing workflow? Tell me where your data lives and how you want to use it."
+  },
+  {
+    "slug": "dancefloor-bass-analyzer",
+    "title": "Dancefloor Bass Analyzer",
+    "description": "A desktop app for exploring the low-frequency characteristics of a DJ’s music library, built with React and Rust.",
+    "label": "Desktop app / in development",
+    "source": "https://github.com/nrrb/music-energy-analyzer",
+    "live": null,
+    "problem": "A DJ exploring a music library needs a way to inspect the low-frequency character of tracks. This project focuses on that exploration in a desktop interface.",
+    "role": "I’m developing the desktop app with React and Rust. Its focus is library exploration and track inspection, distinct from the direct Rekordbox database integration of Bass Notes.",
+    "decisions": [
+      {
+        "decision": "A desktop interface built with React and Rust",
+        "purpose": "Bring music-library exploration into a dedicated application."
+      },
+      {
+        "decision": "Track-level inspection as the focus",
+        "purpose": "Help DJs explore the low-frequency characteristics of individual tracks."
+      }
+    ],
+    "delivered": [
+      "An in-development desktop application. A downloadable production release is not being offered here."
+    ],
+    "planned": [
+      "Continue developing and documenting local processing, track inspection, adjustable profiles, and responsive analysis. Exact feature readiness still needs confirmation."
+    ],
+    "media": [
+      {
+        "src": null,
+        "assetPath": "/images/projects/dancefloor-bass-analyzer/track-library.png",
+        "title": "Track library and detail view",
+        "caption": "Show the current development build and a selected track’s analysis.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      },
+      {
+        "src": null,
+        "assetPath": "/images/projects/dancefloor-bass-analyzer/profile-editor.png",
+        "title": "Analysis profile editor",
+        "caption": "Show the current profile controls once their readiness is confirmed.",
+        "alt": "",
+        "todo": "TODO_MEDIA"
+      }
+    ],
+    "contentTodos": [
+      "TODO_CONTENT: Confirm the current readiness of local processing, adjustable profiles, and responsive analysis, with one concrete decision and example for each."
+    ],
+    "contact": "Need a focused desktop tool for complex data? Tell me what you need to inspect and how you work with it."
   }
 ]

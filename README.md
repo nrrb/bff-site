@@ -1,68 +1,19 @@
 # Big Friendly Function
 
-Personal/freelance site for bigfriendlyfunction.com — built with Astro,
-React (for interactive bits), and Tailwind CSS.
+Nicholas Bennett’s consulting portfolio, built with Astro, React, and Tailwind CSS. The homepage and six project pages are generated as static HTML; the mobile navigation uses a React island.
 
-## Stack
+## Development
 
-- **Astro** — static site framework, ships zero JS by default
-- **React** — used for the header (mobile menu state) via Astro islands
-- **Tailwind CSS** — utility-first styling, tokens in `tailwind.config.mjs`
-- **Google Fonts** — Space Grotesk (display), Inter (body), JetBrains Mono (accents)
+Run `npm install`, then `npm run dev` (http://localhost:4321). Run `npm run build` for a production build and `npm run preview` to review it. Run `node_modules/.bin/tsc --noEmit` for TypeScript checks and `python3 scripts/check-site.py` after building to validate routes, links, metadata, headings, and images. There is no configured lint task.
 
-## Local development
+## Content
 
-```bash
-npm install
-npm run dev
-```
+Edit `src/data/projects.json` for project descriptions, status, role, decisions, delivered work, planned refinements, contact invitations, and media. `src/pages/projects/[slug].astro` is the shared page template. Each slug generates `/projects/<slug>/index.html`, supporting direct loads and refreshes on static hosting.
 
-Site runs at `http://localhost:4321`.
+Each media item has a reserved `assetPath`. Add an approved image under `public` at that path, set `src` to the public URL, and supply accurate `alt` text and a caption. Leave `src` null for a deliberate placeholder. The loader also falls back to a placeholder if the local file is absent. Images retain their aspect ratios.
 
-## Before you launch — things to edit
+See [CONTENT_TODO.md](CONTENT_TODO.md) for the remaining content, media, and optional recordings. Homepage content is in `src/components`; colors and fonts remain in `tailwind.config.mjs` and `src/styles/global.css`.
 
-1. **Photo:** add your real portrait to `public/images/portrait.jpg`
-   (replaces the placeholder referenced in `src/components/Hero.tsx`)
-2. **Contact info:** edit `EMAIL` and `SMS_NUMBER` in
-   `src/components/Contact.tsx`
-3. **Social links:** replace `YOUR_USERNAME` in `src/components/About.tsx`
-   and `src/components/Footer.tsx` with your real GitHub/LinkedIn handles
-4. **Portfolio projects:** edit `src/data/projects.json` — each entry needs
-   a title, description, image path (drop screenshots in
-   `public/images/`), tags, and optional link. No HTML editing required.
+## Hosting
 
-## Deploying to Vercel
-
-1. Push this repo to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/bff-site.git
-   git push -u origin main
-   ```
-2. In Vercel: **New Project** → import the GitHub repo.
-3. Vercel auto-detects Astro — no build config changes needed
-   (build command: `astro build`, output dir: `dist`).
-4. Add your domain: Project Settings → Domains → add
-   `bigfriendlyfunction.com`, then point your registrar's DNS per
-   Vercel's instructions (usually an A record + CNAME for `www`).
-5. Every push to `main` auto-deploys.
-
-## Adding a new portfolio project
-
-Open `src/data/projects.json` and add a new object to the array:
-
-```json
-{
-  "title": "Project Name",
-  "description": "What it does, in one or two sentences.",
-  "image": "/images/project-name.png",
-  "tags": ["React", "AI"],
-  "link": "https://github.com/you/project-name"
-}
-```
-
-Drop the matching screenshot into `public/images/`. That's it — no other
-files need to change.
+Astro writes the static site to `dist`. The existing site targets Vercel with build command `npm run build` and output directory `dist`. Publishing and pushing require explicit authorization; a push to the connected main branch may trigger deployment.

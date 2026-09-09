@@ -1,41 +1,11 @@
-// Edit these two constants with your real contact details.
-const EMAIL = 'nicholas@bigfriendlyfunction.com';
-const WHATSAPP_HANDLE = 'bigfriendlyfunction'; // WhatsApp username, without the leading @
-// Alternative deep-link options — swap WHATSAPP_HREF for one of these if you prefer:
-//   Telegram:  `https://t.me/yourhandle`
-//   WhatsApp by number:  `https://wa.me/15555555555`
-//   SMS:       `sms:+15555555555`
-const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_HANDLE}`;
-
+// TODO_CONTENT: Supply a verified WhatsApp destination before restoring that contact option.
 export default function Contact() {
-  return (
-    <section id="contact" className="mx-auto max-w-3xl px-6 py-20">
-      <p className="mb-3 font-mono text-sm text-steel">03 / contact</p>
-      <h2 className="mb-4 font-display text-3xl font-semibold text-paper">
-        Say hello.
-      </h2>
-      <p className="mb-8 max-w-lg text-lg text-paper/75">
-        Fastest way to reach me is WhatsApp — message{' '}
-        <span className="text-paper">@{WHATSAPP_HANDLE}</span> and it opens
-        right in the app. Prefer email? That works too.
-      </p>
-
-      <div className="flex flex-wrap gap-4">
-        <a
-          href={WHATSAPP_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-xl2 bg-rose px-6 py-3 font-display text-sm font-semibold text-ink transition-transform hover:scale-[1.02] active:scale-[0.98]"
-        >
-          Message me on WhatsApp
-        </a>
-        <a
-          href={`mailto:${EMAIL}`}
-          className="rounded-xl2 border border-white/15 px-6 py-3 font-display text-sm font-semibold text-paper transition-colors hover:border-rose hover:text-rose"
-        >
-          Email me
-        </a>
-      </div>
-    </section>
-  );
+  return <section id="contact" className="section-shell section-space">
+    <div className="rounded-xl2 border border-rose/25 bg-ink-soft p-6 sm:p-10 md:p-14">
+      <p className="eyebrow">04 / contact</p><h2 className="section-title">What would you like to make easier?</h2>
+      <p className="max-w-2xl text-lg leading-relaxed text-paper/80">Tell me what you have now, what you want changed, and any timing or budget constraints. We can start there.</p>
+      <a href="mailto:nicholas@bigfriendlyfunction.com" className="mt-7 inline-block break-all font-display text-xl font-semibold text-rose underline underline-offset-4 sm:text-2xl">nicholas@bigfriendlyfunction.com</a>
+      <div className="mt-8 flex gap-6"><a className="text-link" href="https://github.com/nrrb">GitHub ↗</a><a className="text-link" href="https://www.linkedin.com/in/nicholasrrbennett/">LinkedIn ↗</a></div>
+    </div>
+  </section>;
 }

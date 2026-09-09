@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import ProjectMedia from '../../components/ProjectMedia';
+import { projects } from '../../data/projects';
+export function getStaticPaths() {
+  return projects.map(project => ({ params: { slug: project.slug }, props: { project } }));
+}
+const { project } = Astro.props;
+---
+<BaseLayout title={`${project.title} | Big Friendly Function`} description={project.description}>
+  <Header client:load />
+  <main id="main-content" class="section-shell pb-20 pt-10 sm:pt-16">
+    <a href="/#portfolio" class="text-link">← Back to selected work</a>
+    <header class="mb-10 mt-12 max-w-3xl">
+      <p class="eyebrow">{project.label}</p>
+      <h1 class="font-display text-4xl font-semibold tracking-tight sm:text-6xl">{project.title}</h1>
+      <p class="mt-6 text-xl leading-relaxed text-paper/80">{project.description}</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        {project.live && <a href={project.live} class="button-primary">Visit live site ↗</a>}
+        <a href={project.source} class="button-secondary">View source ↗</a>
+        {project.originalSource && <a href={project.originalSource} class="button-secondary">Original organization repository ↗</a>}
+      </div>
+    </header>
+    <ProjectMedia media={project.media[0]} />
+    <div class="project-copy grid gap-10 py-10 md:grid-cols-2">
+      <section><h2>The problem</h2><p>{project.problem}</p></section>
+      <section><h2>My role</h2><p>{project.role}</p></section>
+    </div>
+    <section class="project-copy border-y border-white/10 py-10">
+      <h2>Decisions and their purpose</h2>
+      <dl class="grid gap-8 sm:grid-cols-2">{project.decisions.map(item => <div><dt class="mb-2 font-display text-lg font-semibold text-paper">{item.decision}</dt><dd class="leading-relaxed text-paper/75">{item.purpose}</dd></div>)}</dl>
+    </section>
+    <div class="project-copy grid gap-10 py-10 md:grid-cols-2">
+      <section><h2>{project.slug === 'dancefloor-bass-analyzer' ? 'Current state' : 'What was delivered'}</h2><ul class="space-y-3">{project.delivered.map(item => <li>{item}</li>)}</ul></section>
+      {project.planned.length > 0 && <section><h2>Planned refinements</h2><ul class="space-y-3">{project.planned.map(item => <li>{item}</li>)}</ul></section>}
+    </div>
+    {project.media.length > 1 && <section class="project-copy"><h2>{project.slug === 'og-blacman' ? 'Desktop and mobile walkthrough' : 'A closer look'}</h2>{project.media.slice(1).map(media => <ProjectMedia media={media} />)}</section>}
+    <aside class="my-10 border-l-2 border-rose/50 pl-6">
+      <h2 class="mb-3 font-display text-lg font-semibold">Details still to add</h2>
+      <ul class="space-y-3 text-sm leading-relaxed text-paper/65">{project.contentTodos.map(todo => <li>{todo.replace('TODO_CONTENT: ', '')}</li>)}</ul>
+    </aside>
+    <section class="mt-14 rounded-xl2 border border-rose/25 bg-ink-soft p-7 sm:p-10">
+      <h2 class="font-display text-2xl font-semibold">Have a similar project?</h2><p class="mb-6 mt-4 max-w-2xl leading-relaxed text-paper/80">{project.contact}</p><a href="/#contact" class="text-link">Tell me about your project ↗</a>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

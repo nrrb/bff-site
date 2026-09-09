@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Work', href: '/#portfolio' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -12,12 +13,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-ink/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-mono text-sm text-rose">
+        <a href="/#top" className="font-mono text-sm text-rose">
           bigFriendlyFunction<span className="text-steel">()</span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden gap-8 font-display text-sm tracking-wide md:flex">
+        <nav aria-label="Main navigation" className="hidden gap-8 font-display text-sm tracking-wide md:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -34,6 +35,8 @@ export default function Header() {
           className="flex h-11 w-11 items-center justify-center rounded-lg md:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
+          aria-controls="mobile-navigation"
+          onKeyDown={(event) => { if (event.key === 'Escape') setOpen(false); }}
           onClick={() => setOpen((v) => !v)}
         >
           <div className="flex flex-col gap-1.5">
@@ -52,7 +55,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-white/5 px-6 pb-4 font-display md:hidden">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" onKeyDown={(event) => { if (event.key === 'Escape') { setOpen(false); document.querySelector<HTMLButtonElement>('button[aria-controls="mobile-navigation"]')?.focus(); } }} className="flex flex-col gap-1 border-t border-white/5 px-6 pb-4 font-display md:hidden">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}

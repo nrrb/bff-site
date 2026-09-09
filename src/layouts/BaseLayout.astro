@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'Big Friendly Function — Nicholas, Freelance Developer & Designer',
-  description = 'Web apps, desktop apps, custom code, design, and AI tooling — built by one big friendly function.',
+  title = 'Big Friendly Function | Nicholas Bennett, Freelance Developer',
+  description = 'Websites, app improvements, and custom workflow tools by Nicholas Bennett, a Baltimore-based freelance developer.',
 } = Astro.props;
 ---
 
@@ -25,11 +25,13 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bigfriendlyfunction.com" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).href} />
 
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
     <title>{title}</title>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <slot />
   </body>
 </html>
