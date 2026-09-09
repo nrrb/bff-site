@@ -5,8 +5,8 @@ export default function Hero() {
         <p className="eyebrow"><span className="text-rose">function</span> bigFriendlyFunction(you) <span className="text-rose">{'{'}</span></p>
         <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Websites and custom tools, <span className="text-rose">built around the way you work.</span></h1>
         <p className="mt-7 max-w-xl text-lg leading-relaxed text-paper/80">I’m Nicholas Bennett, the developer behind Big Friendly Function. I build distinctive websites, improve existing apps, and turn repetitive tasks into useful software.</p>
-        <div className="mt-8 flex flex-wrap gap-4"><a href="#contact" className="button-primary">Tell me about your project</a><a href="#portfolio" className="button-secondary">Explore my work</a></div>
         <p aria-hidden="true" className="mt-8 font-mono text-xs text-rose">{'}'}</p>
+        <div className="mt-8 flex flex-wrap gap-4"><a href="#contact" className="button-primary">Tell me about your project</a><a href="#portfolio" className="button-secondary">Explore my work</a></div>
       </div>
       <figure className="mx-auto w-full max-w-xs">
         {/* TODO_MEDIA: Replace with a new coworking-office portrait, preserving the existing photograph until supplied. */}
