@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+[ "$(git symbolic-ref --quiet --short HEAD || true)" = main ] || exit 0
+cd "$(git rev-parse --show-toplevel)"
+echo 'Refreshing the README screenshot after merging into main...'
+if ! npm run screenshot; then
+  echo 'The merge succeeded, but screenshot capture failed. Run npm run screenshot before pushing main.' >&2
+  exit 1
+fi
+echo 'Review docs/images/homepage.png and commit the image and manifest if changed before pushing main.'

@@ -1,0 +1,10 @@
+{
+  "sourceSha256": "63f8e6bb771c619462cbf7a9eb7bf09e551a8820d7f36e8692fe08e9059b9206",
+  "imageSha256": "6bc1eab099dc0aadf42add0aa5851c5b293784f62f74be45d8505503ba737d4b",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "fullPage": true,
+  "browser": "Chromium 151.0.7922.34"
+}
