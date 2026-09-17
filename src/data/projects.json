@@ -240,7 +240,7 @@
   {
     "slug": "dancefloor-bass-analyzer",
     "title": "Dancefloor Bass Analyzer",
-    "description": "A desktop app for exploring the low-frequency characteristics of a DJ’s music library, built with React and Rust.",
+    "description": "A desktop app for exploring the sub-sonic characteristics of a DJ’s music library, built with React and Rust.",
     "label": "Desktop app / in development",
     "source": "https://github.com/nrrb/music-energy-analyzer",
     "live": null,
