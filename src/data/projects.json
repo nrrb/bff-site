@@ -26,20 +26,18 @@
     ],
     "media": [
       {
-        "src": null,
+        "src": "/images/projects/og-blacman/desktop-hero.png",
         "assetPath": "/images/projects/og-blacman/desktop-hero.png",
         "title": "Desktop hero screenshot",
-        "caption": "Show the real desktop composition and artist identity.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "Hero composition for the live artist website, combining supplied photography and the OG Blacman wordmark.",
+        "alt": "OG Blacman artist website hero with a red stairwell scene and oversized hand-drawn wordmark."
       },
       {
-        "src": null,
+        "src": "/images/projects/og-blacman/phone-player.png",
         "assetPath": "/images/projects/og-blacman/phone-player.png",
         "title": "Phone layout and music player",
-        "caption": "Show how the mobile composition presents music and playback controls.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "A music and media section from the live site, including a video feature and the artist’s custom phone-line player.",
+        "alt": "OG Blacman music page with a video player and a stylized telephone music player."
       }
     ],
     "contentTodos": [
@@ -73,12 +71,25 @@
     "planned": [],
     "media": [
       {
-        "src": null,
+        "src": "/images/projects/medium-talk/conversation-prompt.png",
         "assetPath": "/images/projects/medium-talk/conversation-prompt.png",
         "title": "Phone view with a real conversation prompt",
-        "caption": "Show an actual prompt from the app, with enough interface context to understand how it is used.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "The Medium Talk home screen, inviting participants to select a picnic or city-based conversation experience.",
+        "alt": "Medium Talk mobile home screen with options for a no-small-talk picnic and several cities."
+      },
+      {
+        "src": "/images/projects/medium-talk/picnic-question.png",
+        "assetPath": "/images/projects/medium-talk/picnic-question.png",
+        "title": "Picnic arrival prompt",
+        "caption": "A prompt designed to help picnic guests arrive, get grounded, and begin a real conversation.",
+        "alt": "Yellow Medium Talk prompt asking, What are you giving yourself permission not to do today?"
+      },
+      {
+        "src": "/images/projects/medium-talk/city-question.png",
+        "assetPath": "/images/projects/medium-talk/city-question.png",
+        "title": "City conversation prompt",
+        "caption": "A city-specific prompt that gives strangers a generous, low-pressure opening question.",
+        "alt": "Blue Medium Talk prompt asking, What is a way someone has loved or supported you that meant everything?"
       }
     ],
     "contentTodos": [
@@ -109,12 +120,11 @@
     ],
     "media": [
       {
-        "src": null,
+        "src": "/images/projects/kellogg-matcher/original-interface.png",
         "assetPath": "/images/projects/kellogg-matcher/original-interface.png",
         "title": "Original matching interface",
-        "caption": "Show the original tool, using fictional fellows and placements.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "A refreshed interface concept for explaining the preference import, validation, matching, and download workflow. It is independent portfolio work, not represented as a commissioned or adopted Kellogg interface.",
+        "alt": "Kellogg Board Fellows Optimizer interface showing a four-step internship matching workflow."
       },
       {
         "src": null,
@@ -163,12 +173,11 @@
     ],
     "media": [
       {
-        "src": null,
+        "src": "/images/projects/poster-slicer/page-grid.png",
         "assetPath": "/images/projects/poster-slicer/page-grid.png",
         "title": "Current page-grid preview",
-        "caption": "Show a real image divided into the pages used to make the poster.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "The live Poster Slicer interface showing image upload, poster dimensions, page count, and a multi-page preview.",
+        "alt": "Poster Slicer interface with a large script image divided across a printable grid of pages."
       },
       {
         "src": null,
@@ -209,12 +218,11 @@
     "planned": [],
     "media": [
       {
-        "src": null,
+        "src": "/images/projects/rekordbox-bass-notes/analysis-output.png",
         "assetPath": "/images/projects/rekordbox-bass-notes/analysis-output.png",
         "title": "Bass analysis output",
-        "caption": "Show actual output with suitable sample track data.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "The Bass Notes library view: a selected track’s low, mid, and high bass readings sit alongside its spectrum and the batch re-analysis queue.",
+        "alt": "Rekordbox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel."
       },
       {
         "src": null,

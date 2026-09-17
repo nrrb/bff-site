@@ -30,12 +30,18 @@ const slideCount = presentation.slides.length + 1;
           <h2 id={`slide-${index}`}>{slide.title}</h2>
           {slide.prompt && <p class="presentation-prompt">{slide.prompt}</p>}
           {slide.body && <p class="presentation-body">{slide.body}</p>}
-          {slide.points && <dl class="presentation-points">
-            {slide.points.map((point) => <div>
-              <dt>{point.label}</dt>
-              <dd>{point.sample}</dd>
-            </div>)}
-          </dl>}
+          {slide.points && <div class:list={['presentation-detail', slide.project?.image && 'presentation-detail-with-image']}>
+            <dl class="presentation-points">
+              {slide.points.map((point) => <div>
+                <dt>{point.label}</dt>
+                <dd>{point.sample}</dd>
+              </div>)}
+            </dl>
+            {slide.project?.image && <figure class="presentation-media">
+              <img src={slide.project.image.src} alt={slide.project.image.alt} loading="lazy" />
+              <figcaption>{slide.project.image.caption}</figcaption>
+            </figure>}
+          </div>}
           {slide.project && <div class="presentation-links">
             <a class="text-link" href={slide.project.href}>{slide.project.label} <span aria-hidden="true">↗</span></a>
             {slide.project.live && <a class="text-link" href={slide.project.live}>Visit live work <span aria-hidden="true">↗</span></a>}

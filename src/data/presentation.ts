@@ -16,6 +16,7 @@ export type PresentationSlide = {
     label: string;
     href: string;
     live?: string;
+    image?: { src: string; alt: string; caption: string };
   };
 };
 
@@ -40,7 +41,15 @@ export const presentation = {
     {
       eyebrow: '02 / case study',
       title: 'Kellogg Board Fellows internship matcher',
-      project: { label: 'Open supporting project page', href: '/projects/kellogg-matcher/' },
+      project: {
+        label: 'Open supporting project page',
+        href: '/projects/kellogg-matcher/',
+        image: {
+          src: '/images/projects/kellogg-matcher/original-interface.png',
+          alt: 'Kellogg Board Fellows Optimizer interface showing a four-step internship matching workflow.',
+          caption: 'Independent portfolio interface concept',
+        },
+      },
       points: [
         { label: 'The need', sample: '[Sample: “Matching fellows to placements through ranked preferences required a clearer, more repeatable way to work through choices.”]' },
         { label: 'My role', sample: '[Sample: “I translated the matching task into a tool that made the preference input and resulting placements easier to work with.”]' },
@@ -52,7 +61,15 @@ export const presentation = {
     {
       eyebrow: '03 / case study',
       title: 'Rekordbox Bass Notes',
-      project: { label: 'Open supporting project page', href: '/projects/rekordbox-bass-notes/' },
+      project: {
+        label: 'Open supporting project page',
+        href: '/projects/rekordbox-bass-notes/',
+        image: {
+          src: '/images/projects/rekordbox-bass-notes/analysis-output.png',
+          alt: 'Rekordbox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel.',
+          caption: 'Library analysis and batch re-analysis view',
+        },
+      },
       points: [
         { label: 'The need', sample: '[Sample: “DJs needed a faster way to identify tracks with strong low-end energy inside the library workflow they already use.”]' },
         { label: 'My role', sample: '[Sample: “I built the analysis tool and connected its output directly to the Rekordbox database.”]' },
@@ -64,7 +81,16 @@ export const presentation = {
     {
       eyebrow: '04 / case study',
       title: 'Medium Talk',
-      project: { label: 'Open supporting project page', href: '/projects/medium-talk/', live: 'https://mediumtalk.org/' },
+      project: {
+        label: 'Open supporting project page',
+        href: '/projects/medium-talk/',
+        live: 'https://mediumtalk.org/',
+        image: {
+          src: '/images/projects/medium-talk/conversation-prompt.png',
+          alt: 'Medium Talk mobile home screen with options for a no-small-talk picnic and several cities.',
+          caption: 'Conversation experience selector',
+        },
+      },
       points: [
         { label: 'The need', sample: '[Sample: “People arriving at a public picnic as strangers needed a low-pressure way to begin meaningful conversation.”]' },
         { label: 'My role', sample: '[Sample: “I organized the gathering and built the digital conversation tool around that real-world setting.”]' },
@@ -76,7 +102,16 @@ export const presentation = {
     {
       eyebrow: '05 / case study',
       title: 'ogblacman.com',
-      project: { label: 'Open supporting project page', href: '/projects/og-blacman/', live: 'https://www.ogblacman.com/' },
+      project: {
+        label: 'Open supporting project page',
+        href: '/projects/og-blacman/',
+        live: 'https://www.ogblacman.com/',
+        image: {
+          src: '/images/projects/og-blacman/desktop-hero.png',
+          alt: 'OG Blacman artist website hero with a red stairwell scene and oversized hand-drawn wordmark.',
+          caption: 'Live artist website hero',
+        },
+      },
       points: [
         { label: 'The need', sample: '[Sample: “The site needed to express a distinct artist identity while giving people an easy way to explore music and media on the devices they use.”]' },
         { label: 'My role', sample: '[Sample: “I built the website and developed dedicated desktop and mobile experiences around the supplied creative work.”]' },
