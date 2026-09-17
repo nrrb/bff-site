@@ -56,3 +56,101 @@ button:focus-visible {
   .skip-link { @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-rose px-5 py-3 text-ink focus:translate-y-0; }
 }
 section[id], main[id] { scroll-margin-top: 6rem; }
+
+.presentation-deck {
+  background: radial-gradient(ellipse at 80% 8%, rgb(227 174 184 / 0.12), transparent 35%), #16151a;
+}
+
+.presentation-topbar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem clamp(1.5rem, 5vw, 5rem);
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  background: rgb(22 21 26 / 0.9);
+  backdrop-filter: blur(16px);
+}
+
+.presentation-notice {
+  position: fixed;
+  z-index: 21;
+  right: 1.5rem;
+  bottom: 5.4rem;
+  max-width: 18rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid rgb(227 174 184 / 0.32);
+  border-radius: 0.5rem;
+  background: rgb(34 31 40 / 0.92);
+  color: rgb(245 241 236 / 0.68);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+.presentation-slide {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  padding: 8rem clamp(1.5rem, 10vw, 10rem) 7.25rem;
+  scroll-snap-align: start;
+  align-items: center;
+}
+
+.presentation-cover {
+  background: linear-gradient(135deg, rgb(227 174 184 / 0.1), transparent 45%);
+}
+
+.presentation-kicker, .presentation-slide-number {
+  color: #8a94a6;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.presentation-cover h1, .presentation-content h2 {
+  max-width: 60rem;
+  margin: 1.25rem 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.presentation-cover h1 { font-size: clamp(3.2rem, 8vw, 7rem); line-height: 0.95; }
+.presentation-content h2 { font-size: clamp(2.7rem, 6vw, 5.5rem); line-height: 0.98; }
+.presentation-subtitle { max-width: 39rem; margin-top: 1.7rem; color: rgb(245 241 236 / 0.76); font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.45; }
+.presentation-instruction { margin-top: 4rem; color: #8a94a6; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; }
+.presentation-slide-number { position: absolute; top: 8rem; right: clamp(1.5rem, 5vw, 5rem); }
+.presentation-content { width: min(100%, 69rem); }
+.presentation-prompt { max-width: 43rem; margin-top: 1.5rem; color: #e3aeb8; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; line-height: 1.6; }
+.presentation-body { max-width: 57rem; margin-top: 2.5rem; color: rgb(245 241 236 / 0.75); font-size: clamp(1.1rem, 2.1vw, 1.5rem); line-height: 1.55; }
+
+.presentation-points { display: grid; gap: 0; max-width: 69rem; margin-top: 2.5rem; border-top: 1px solid rgb(255 255 255 / 0.15); }
+.presentation-points > div { display: grid; grid-template-columns: minmax(9rem, 0.35fr) 1fr; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid rgb(255 255 255 / 0.15); }
+.presentation-points dt { color: #e3aeb8; font-family: "Space Grotesk", sans-serif; font-size: 1.05rem; font-weight: 600; }
+.presentation-points dd { color: rgb(245 241 236 / 0.72); font-size: 0.96rem; line-height: 1.5; }
+.presentation-links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
+
+.presentation-controls { position: fixed; z-index: 22; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 1rem 1.5rem; border-top: 1px solid rgb(255 255 255 / 0.08); background: rgb(22 21 26 / 0.9); backdrop-filter: blur(16px); }
+.presentation-controls button { color: rgb(245 241 236 / 0.88); font-family: "Space Grotesk", sans-serif; font-size: 0.82rem; font-weight: 600; }
+.presentation-controls > button { min-width: 5.5rem; padding: 0.55rem 0.75rem; border: 1px solid rgb(255 255 255 / 0.18); border-radius: 0.45rem; transition: border-color 150ms, color 150ms; }
+.presentation-controls > button:hover:not(:disabled) { border-color: #e3aeb8; color: #e3aeb8; }
+.presentation-controls > button:disabled { cursor: not-allowed; opacity: 0.35; }
+.presentation-dots { display: flex; gap: 0.45rem; }
+.presentation-dots button { width: 0.55rem; height: 0.55rem; border-radius: 999px; background: #5e6a80; transition: transform 150ms, background 150ms; }
+.presentation-dots button.is-active { background: #e3aeb8; transform: scale(1.3); }
+
+@media (max-width: 640px) {
+  .presentation-notice { display: none; }
+  .presentation-slide { padding-top: 6.5rem; }
+  .presentation-slide-number { top: 6.5rem; }
+  .presentation-points > div { grid-template-columns: 1fr; gap: 0.35rem; }
+  .presentation-controls { gap: 0.5rem; }
+  .presentation-dots { gap: 0.3rem; }
+  .presentation-controls > button { min-width: auto; padding-inline: 0.55rem; }
+}

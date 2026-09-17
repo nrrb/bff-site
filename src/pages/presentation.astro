@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { presentation } from '../data/presentation';
+
+const slideCount = presentation.slides.length + 1;
+---
+
+<BaseLayout title="Portfolio walkthrough | Big Friendly Function" description="A presentation walkthrough of selected digital projects by Nicholas Bennett.">
+  <main id="main-content" class="presentation-deck">
+    <header class="presentation-topbar">
+      <a href="/" class="font-mono text-sm text-rose">bigFriendlyFunction<span class="text-steel">()</span></a>
+      <p class="hidden font-mono text-xs text-steel sm:block">Portfolio walkthrough</p>
+      <span id="slide-counter" class="font-mono text-xs text-paper/60">01 / {String(slideCount).padStart(2, '0')}</span>
+    </header>
+
+    <p class="presentation-notice" role="note">{presentation.notice}</p>
+
+    <section class="presentation-slide presentation-cover" data-slide aria-labelledby="presentation-title">
+      <div class="presentation-kicker">Selected work / 2026</div>
+      <h1 id="presentation-title">{presentation.title}</h1>
+      <p class="presentation-subtitle">{presentation.subtitle}</p>
+      <p class="presentation-instruction">Use the arrow keys, spacebar, or the controls below to move through the walkthrough.</p>
+    </section>
+
+    {presentation.slides.map((slide, index) => (
+      <section class:list={['presentation-slide', slide.points && 'presentation-case-study']} data-slide aria-labelledby={`slide-${index}`}>
+        <div class="presentation-slide-number">{String(index + 2).padStart(2, '0')}</div>
+        <div class="presentation-content">
+          <p class="eyebrow">{slide.eyebrow}</p>
+          <h2 id={`slide-${index}`}>{slide.title}</h2>
+          {slide.prompt && <p class="presentation-prompt">{slide.prompt}</p>}
+          {slide.body && <p class="presentation-body">{slide.body}</p>}
+          {slide.points && <dl class="presentation-points">
+            {slide.points.map((point) => <div>
+              <dt>{point.label}</dt>
+              <dd>{point.sample}</dd>
+            </div>)}
+          </dl>}
+          {slide.project && <div class="presentation-links">
+            <a class="text-link" href={slide.project.href}>{slide.project.label} <span aria-hidden="true">↗</span></a>
+            {slide.project.live && <a class="text-link" href={slide.project.live}>Visit live work <span aria-hidden="true">↗</span></a>}
+          </div>}
+        </div>
+      </section>
+    ))}
+
+    <nav class="presentation-controls" aria-label="Presentation controls">
+      <button type="button" id="previous-slide">← Previous</button>
+      <div id="presentation-dots" class="presentation-dots" aria-label="Choose a slide">
+        {Array.from({ length: slideCount }).map((_, index) => <button type="button" data-slide-target={index} aria-label={`Go to slide ${index + 1}`} />)}
+      </div>
+      <button type="button" id="next-slide">Next →</button>
+    </nav>
+  </main>
+
+  <script>
+    const slides = [...document.querySelectorAll<HTMLElement>('[data-slide]')];
+    const dots = [...document.querySelectorAll<HTMLButtonElement>('[data-slide-target]')];
+    const counter = document.querySelector('#slide-counter');
+    const previous = document.querySelector<HTMLButtonElement>('#previous-slide');
+    const next = document.querySelector<HTMLButtonElement>('#next-slide');
+    let currentSlide = 0;
+
+    const goToSlide = (index: number) => {
+      currentSlide = Math.max(0, Math.min(index, slides.length - 1));
+      slides[currentSlide]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      dots.forEach((dot, dotIndex) => {
+        const active = dotIndex === currentSlide;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-current', active ? 'true' : 'false');
+      });
+      if (counter) counter.textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+      if (previous) previous.disabled = currentSlide === 0;
+      if (next) next.disabled = currentSlide === slides.length - 1;
+    };
+
+    previous?.addEventListener('click', () => goToSlide(currentSlide - 1));
+    next?.addEventListener('click', () => goToSlide(currentSlide + 1));
+    dots.forEach((dot, index) => dot.addEventListener('click', () => goToSlide(index)));
+    document.addEventListener('keydown', (event) => {
+      if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) return;
+      if (['ArrowRight', 'ArrowDown', ' '].includes(event.key)) { event.preventDefault(); goToSlide(currentSlide + 1); }
+      if (['ArrowLeft', 'ArrowUp'].includes(event.key)) { event.preventDefault(); goToSlide(currentSlide - 1); }
+      if (event.key === 'Home') { event.preventDefault(); goToSlide(0); }
+      if (event.key === 'End') { event.preventDefault(); goToSlide(slides.length - 1); }
+    });
+    goToSlide(0);
+  </script>
+</BaseLayout>
