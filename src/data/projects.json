@@ -33,10 +33,10 @@
         "alt": "OG Blacman artist website hero with a red stairwell scene and oversized hand-drawn wordmark."
       },
       {
-        "src": "/images/projects/og-blacman/phone-player.png",
-        "assetPath": "/images/projects/og-blacman/phone-player.png",
+        "src": "/images/projects/og-blacman/music-player-loop.webm",
+        "assetPath": "/images/projects/og-blacman/music-player-loop.webm",
         "title": "Phone layout and music player",
-        "caption": "A music and media section from the live site, including a video feature and the artist’s custom phone-line player.",
+        "caption": "A six-second looping walkthrough of the artist’s custom phone-line player and live spectrum analyzer.",
         "alt": "OG Blacman music page with a video player and a stylized telephone music player."
       }
     ],
