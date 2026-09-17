@@ -38,7 +38,7 @@ const { project } = Astro.props;
     </div>
     {project.slug !== 'dancefloor-bass-analyzer' && project.media.length > 1 && <section class="project-copy"><h2>{project.slug === 'og-blacman' ? 'Desktop and mobile walkthrough' : 'A closer look'}</h2>{project.media.slice(1).map(media => <ProjectMedia media={media} />)}</section>}
     <aside class="my-10 border-l-2 border-rose/50 pl-6">
-      <h2 class="mb-3 font-display text-lg font-semibold">{project.slug === 'dancefloor-bass-analyzer' ? 'Future direction' : 'Details still to add'}</h2>
+      <h2 class="mb-3 font-display text-lg font-semibold">{['dancefloor-bass-analyzer', 'og-blacman'].includes(project.slug) ? 'Future direction' : 'Details still to add'}</h2>
       <ul class="space-y-3 text-sm leading-relaxed text-paper/65">{project.contentTodos.map(todo => <li>{todo.replace('TODO_CONTENT: ', '')}</li>)}</ul>
     </aside>
     <section class="mt-14 rounded-xl2 border border-rose/25 bg-ink-soft p-7 sm:p-10">
