@@ -21,9 +21,9 @@ export type PresentationSlide = {
 };
 
 export const presentation = {
-  title: 'A practical path from need to delivery',
-  subtitle: 'A portfolio walkthrough for a Digital Project Manager',
-  notice: 'Draft presentation copy — replace every [bracketed prompt] with your own precise experience before sharing.',
+  title: 'A human-centered path from need to use',
+  subtitle: 'A portfolio walkthrough for Taiji Thomas, Digital Project Manager',
+  notice: '',
   process: [
     { name: 'Discover', prompt: '[How did you learn what people needed?]' },
     { name: 'Define', prompt: '[What did you prioritize or make clear?]' },
@@ -34,9 +34,9 @@ export const presentation = {
   slides: [
     {
       eyebrow: '01 / how I work',
-      title: 'A consistent process, adapted to the problem.',
-      prompt: 'Use this slide to give the audience a lens for every case study.',
-      body: '[Sample: “I start by making the real need and constraints visible. Then I turn them into a focused product decision, keep feedback close to the work, and deliver something people can actually use.”]',
+      title: 'Empathetic listening and focus on user experience.',
+      prompt: 'A consistent process, adapted to the problem.',
+      body: 'I start with user interviews, then define the problem, design a solution, iterate based on feedback, and deliver a usable product. I focus on understanding the people who will use the product and the context in which they will use it.',
     },
     {
       eyebrow: '02 / case study',
@@ -47,15 +47,15 @@ export const presentation = {
         image: {
           src: '/images/projects/kellogg-matcher/original-interface.png',
           alt: 'Kellogg Board Fellows Optimizer interface showing a four-step internship matching workflow.',
-          caption: 'Independent portfolio interface concept',
+          caption: 'Intuitive four-step workflow for matching MBA students to internships',
         },
       },
       points: [
-        { label: 'The need', sample: '[Sample: “Matching fellows to placements through ranked preferences required a clearer, more repeatable way to work through choices.”]' },
-        { label: 'My role', sample: '[Sample: “I translated the matching task into a tool that made the preference input and resulting placements easier to work with.”]' },
-        { label: 'Key choice', sample: '[Sample: “I centered ranked preferences, because they were the meaningful input behind a defensible placement process.”]' },
-        { label: 'Iteration to describe', sample: '[Add one true example: a rule clarified, an edge case found, feedback on the workflow, or a constraint that changed the build.]' },
-        { label: 'Delivery', sample: '[Sample: “The original tool was used in a more rudimentary form; my portfolio refresh is independent work and should be described separately.”]' },
+        { label: 'The need', sample: 'Administrators needed a faster, more repeatable way to match MBA students to internships through ranked preferences.' },
+        { label: 'My role', sample: 'I interviewed the administrators to understand their pain points and workflows, and iteratively designed a solution to address their needs.' },
+        { label: 'Key choice', sample: 'I used a mathematical optimization algorithm to ensure fairness.' },
+        { label: 'Iteration to describe', sample: 'Built on top of Qualtrics used to survey student preferences, minimizing change for administrators and students.' },
+        { label: 'Delivery', sample: 'I built a web app in 2011, making it truly cross-platform compatible and it continued to be used for years after.' },
       ],
     },
     {
@@ -67,15 +67,15 @@ export const presentation = {
         image: {
           src: '/images/projects/rekordbox-bass-notes/analysis-output.png',
           alt: 'RekordBox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel.',
-          caption: 'Library analysis and batch re-analysis view',
+          caption: 'RekordBox library analysis with bass scores and a live player',
         },
       },
       points: [
-        { label: 'The need', sample: '[Sample: “DJs needed a faster way to identify tracks that SHAKE the dancers inside the library workflow they already use.”]' },
-        { label: 'My role', sample: '[Sample: “I built the analysis tool and connected its output directly to the RekordBox database.”]' },
-        { label: 'Key choice', sample: '[Sample: “Instead of making DJs consult a separate report, I put the bass information where track selection already happens.”]' },
-        { label: 'Iteration to describe', sample: '[Add one true example: how you tuned the analysis, validated output, handled database constraints, or improved usability.]' },
-        { label: 'Delivery', sample: '[Sample: “The delivered tool profiles bass characteristics and writes usable results into RekordBox.”]' },
+        { label: 'The need', sample: 'DJs need a quick way to identify tracks likely to SHAKE the dancers at different intensity levels—inside RekordBox, the software they use to prepare and perform.' },
+        { label: 'My role', sample: 'I investigated whether RekordBox’s proprietary database could be modified directly, then built a bass-analysis tool around that workflow.' },
+        { label: 'Key choice', sample: 'I wrote concise, DJ-readable results into RekordBox while preserving the existing metadata a DJ already depends on.' },
+        { label: 'Iteration', sample: 'I developed a safe backup and restoration workflow, then refined how analysis results appear so they work as a fast heads-up view rather than a separate report.' },
+        { label: 'Delivery', sample: 'The delivered tool profiles bass characteristics and writes usable results directly into RekordBox.' },
       ],
     },
     {
@@ -92,11 +92,11 @@ export const presentation = {
         },
       },
       points: [
-        { label: 'The need', sample: '[Sample: “People arriving at a public picnic as strangers needed a low-pressure way to begin meaningful conversation.”]' },
-        { label: 'My role', sample: '[Sample: “I organized the gathering and built the digital conversation tool around that real-world setting.”]' },
-        { label: 'Key choice', sample: '[Sample: “I treated the app as a shared starting point—not the center of the event—so the interaction could stay human and in-person.”]' },
-        { label: 'Iteration to describe', sample: '[Add one true example: prompt selection, observing the event, participant feedback, or a decision you revised.]' },
-        { label: 'Delivery', sample: '[Sample: “Medium Talk is an app built to support conversation at the public picnic I hosted.”]' },
+        { label: 'The need', sample: 'People meeting through a public picnic needed a welcoming, low-pressure way to begin a more meaningful conversation.' },
+        { label: 'My role', sample: 'I organized the picnic and created Medium Talk as a digital conversation companion for the event, then made it available through the Meetup listing.' },
+        { label: 'Key choice', sample: 'I designed the experience around generous prompts rather than social feeds or profiles, so it could support in-person connection without competing for attention.' },
+        { label: 'Iteration', sample: 'I extended the proof of concept into a reusable prompt system with city-specific themes and color schemes, designed for 12 U.S. cities and 43 cities overall.' },
+        { label: 'Delivery', sample: 'Medium Talk is a live, mobile-first conversation app that demonstrates how lightweight software can create an inviting entry point for community gathering.' },
       ],
     },
     {
@@ -113,21 +113,21 @@ export const presentation = {
         },
       },
       points: [
-        { label: 'The need', sample: '[Sample: “The site needed to express a distinct artist identity while giving people an easy way to explore music and media on the devices they use.”]' },
-        { label: 'My role', sample: '[Sample: “I built the website and developed dedicated desktop and mobile experiences around the supplied creative work.”]' },
-        { label: 'Key choice', sample: '[Sample: “I used distinct compositions for desktop and phone so the visual identity and music experience could work at each scale.”]' },
-        { label: 'Iteration to describe', sample: '[Add one true example: a creative decision, responsive adjustment, collaborator feedback, or performance/usability refinement.]' },
-        { label: 'Delivery', sample: '[Sample: “The result is a live artist website with dedicated desktop and mobile experiences.”]' },
+        { label: 'The need', sample: 'The artist needed a distinctive, mobile-first web presence that could translate a loose brief and an inspiration site into a polished experience within two weeks.' },
+        { label: 'My role', sample: 'I consulted with the artist, his manager, and a supporting team member to shape requirements, make recommendations, and build the web app.' },
+        { label: 'Key choice', sample: 'I prioritized a mobile-first composition and a custom embedded player, while mapping a practical path for future merch and event-listing integrations.' },
+        { label: 'Iteration', sample: 'The work progressed through at least 15 rounds of revision, using the live build to turn creative direction into focused, reviewable decisions.' },
+        { label: 'Delivery', sample: 'I delivered a live, optimized artist website with dedicated desktop and mobile experiences, plus platform recommendations for merch, Posh event listings, and future releases.' },
       ],
     },
     {
       eyebrow: '06 / working together',
-      title: 'What a project manager can expect from me.',
+      title: 'How I work with project managers.',
       points: [
-        { label: 'Clarity early', sample: '[Sample: “I surface assumptions, user needs, and constraints before they become expensive surprises.”]' },
-        { label: 'Decisions with reasons', sample: '[Sample: “I explain what I recommend, what it solves, and what trade-offs it creates.”]' },
-        { label: 'Feedback that moves work forward', sample: '[Sample: “I use concrete work-in-progress to turn broad reactions into useful decisions.”]' },
-        { label: 'A usable handoff', sample: '[Sample: “I focus on shipping work that fits the actual workflow, with clear boundaries around what is delivered and what comes next.”]' },
+        { label: 'Clarify the brief', sample: 'I translate loose goals, inspiration, and constraints into a focused scope with decisions people can review.' },
+        { label: 'Work in the real workflow', sample: 'I account for the tools, data, safety requirements, and handoffs people already rely on.' },
+        { label: 'Make iteration visible', sample: 'I use working prototypes and targeted revisions to turn broad feedback into decisions that move delivery forward.' },
+        { label: 'Deliver with a next step', sample: 'I separate what is ready now from what needs client input, platform setup, or a subsequent phase.' },
       ],
     },
   ] satisfies PresentationSlide[],
