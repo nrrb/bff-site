@@ -59,7 +59,7 @@ Project routes:
 
 - `/projects/og-blacman/`
 - `/projects/medium-talk/`
-- `/projects/kellogg-matcher/`
+- `/projects/kellogg-board-fellows-optimizer/`
 - `/projects/poster-slicer/`
 - `/projects/rekordbox-bass-notes/`
 - `/projects/dancefloor-bass-analyzer/`

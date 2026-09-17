@@ -97,8 +97,8 @@
     "contact": "Have an idea that brings people together? Tell me about the setting and how software could help."
   },
   {
-    "slug": "kellogg-matcher",
-    "title": "Kellogg Board Fellows Matcher",
+    "slug": "kellogg-board-fellows-optimizer",
+    "title": "Kellogg Board Fellows Optimizer",
     "description": "Matching MBA talent to corporate board internships, optimally.",
     "label": "Original tool / independent refresh planned",
     "source": "https://github.com/nrrb/internship-matcher",

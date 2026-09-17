@@ -40,10 +40,10 @@ export const presentation = {
     },
     {
       eyebrow: '02 / case study',
-      title: 'Kellogg Board Fellows internship matcher',
+      title: 'Kellogg Board Fellows Optimizer',
       project: {
         label: 'Open supporting project page',
-        href: '/projects/kellogg-matcher/',
+        href: '/projects/kellogg-board-fellows-optimizer/',
         image: {
           src: '/images/projects/kellogg-matcher/original-interface.png',
           alt: 'Kellogg Board Fellows Optimizer interface showing a four-step internship matching workflow.',
