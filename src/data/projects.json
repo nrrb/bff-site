@@ -265,12 +265,11 @@
     ],
     "media": [
       {
-        "src": null,
+        "src": "/images/projects/dancefloor-bass-analyzer/track-library.png",
         "assetPath": "/images/projects/dancefloor-bass-analyzer/track-library.png",
         "title": "Track library and detail view",
-        "caption": "Show the current development build and a selected track’s analysis.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
+        "caption": "The in-development desktop app showing a scanned library, a selected track’s spectrum and spectrogram, and calculated low-frequency measures.",
+        "alt": "Dancefloor Bass Analyzer desktop app with a track list, audio spectrum, spectrogram, and bass-analysis measurements."
       },
       {
         "src": null,
