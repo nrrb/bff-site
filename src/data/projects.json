@@ -99,7 +99,7 @@
   {
     "slug": "kellogg-matcher",
     "title": "Kellogg Board Fellows Matcher",
-    "description": "A tool I originally built to match fellows to placements using ranked preferences.",
+    "description": "Matching MBA talent to corporate board internships, optimally.",
     "label": "Original tool / independent refresh planned",
     "source": "https://github.com/nrrb/internship-matcher",
     "live": null,
