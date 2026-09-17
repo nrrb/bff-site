@@ -71,11 +71,11 @@
     "planned": [],
     "media": [
       {
-        "src": "/images/projects/medium-talk/conversation-prompt.png",
-        "assetPath": "/images/projects/medium-talk/conversation-prompt.png",
-        "title": "Phone view with a real conversation prompt",
-        "caption": "The Medium Talk home screen, inviting participants to select a picnic or city-based conversation experience.",
-        "alt": "Medium Talk mobile home screen with options for a no-small-talk picnic and several cities."
+        "src": "/images/projects/medium-talk/medium-talk-fan.png",
+        "assetPath": "/images/projects/medium-talk/medium-talk-fan.png",
+        "title": "Medium Talk conversation experience",
+        "caption": "A fan of three Medium Talk screens: the picnic arrival prompt, the central home screen, and a city conversation prompt.",
+        "alt": "Three Medium Talk screens in an overlapping fan: a yellow picnic prompt on the left, the Medium Talk home screen centered in front, and a blue city prompt on the right."
       },
       {
         "src": "/images/projects/medium-talk/picnic-question.png",

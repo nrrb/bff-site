@@ -86,9 +86,9 @@ export const presentation = {
         href: '/projects/medium-talk/',
         live: 'https://mediumtalk.org/',
         image: {
-          src: '/images/projects/medium-talk/conversation-prompt.png',
-          alt: 'Medium Talk mobile home screen with options for a no-small-talk picnic and several cities.',
-          caption: 'Conversation experience selector',
+          src: '/images/projects/medium-talk/medium-talk-fan.png',
+          alt: 'Three Medium Talk screens in an overlapping fan: a yellow picnic prompt on the left, the Medium Talk home screen centered in front, and a blue city prompt on the right.',
+          caption: 'Three connected conversation experiences',
         },
       },
       points: [
