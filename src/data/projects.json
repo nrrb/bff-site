@@ -91,9 +91,7 @@
         "alt": "Blue Medium Talk prompt asking, What is a way someone has loved or supported you that meant everything?"
       }
     ],
-    "contentTodos": [
-      "TODO_CONTENT: Describe the actual prompt flow and implementation choices. Attendance, feedback, and measured outcomes have not been supplied."
-    ],
+    "contentTodos": [],
     "contact": "Have an idea that brings people together? Tell me about the setting and how software could help."
   },
   {
