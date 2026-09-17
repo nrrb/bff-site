@@ -194,8 +194,8 @@
   },
   {
     "slug": "rekordbox-bass-notes",
-    "title": "Rekordbox Bass Notes",
-    "description": "Profiles the bass characteristics of music and writes results directly into the Rekordbox database, helping DJs identify tracks with strong low-end energy.",
+    "title": "RekordBox Bass Notes",
+    "description": "Profiles the bass characteristics of music and writes results directly into the Rekordbox database, helping DJs identify tracks that SHAKE the dancers.",
     "label": "DJ workflow tool",
     "source": "https://github.com/nrrb/rekordbox-bass-notes",
     "live": null,
