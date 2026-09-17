@@ -195,24 +195,24 @@
   {
     "slug": "rekordbox-bass-notes",
     "title": "RekordBox Bass Notes",
-    "description": "Profiles the bass characteristics of music and writes results directly into the Rekordbox database, helping DJs identify tracks that SHAKE the dancers.",
+    "description": "Profiles the bass characteristics of music and writes results directly into the RekordBox database, helping DJs identify tracks that SHAKE the dancers.",
     "label": "DJ workflow tool",
     "source": "https://github.com/nrrb/rekordbox-bass-notes",
     "live": null,
-    "problem": "DJs looking for tracks with strong low-end energy need information they can use in their existing music-library workflow. This tool connects bass analysis to Rekordbox.",
-    "role": "I built a tool that profiles bass characteristics and writes the results directly into the Rekordbox database.",
+    "problem": "DJs looking for tracks with strong low-end energy need information they can use in their existing music-library workflow. This tool connects bass analysis to RekordBox.",
+    "role": "I built a tool that profiles bass characteristics and writes the results directly into the RekordBox database.",
     "decisions": [
       {
         "decision": "Bass-focused analysis",
         "purpose": "Help DJs identify tracks with strong low-end energy."
       },
       {
-        "decision": "Results written into the Rekordbox database",
+        "decision": "Results written into the RekordBox database",
         "purpose": "Put the analysis into the existing DJ workflow."
       }
     ],
     "delivered": [
-      "A bass-profiling tool with direct Rekordbox database integration."
+      "A bass-profiling tool with direct RekordBox database integration."
     ],
     "planned": [],
     "media": [
@@ -221,13 +221,13 @@
         "assetPath": "/images/projects/rekordbox-bass-notes/analysis-output.png",
         "title": "Bass analysis output",
         "caption": "The Bass Notes library view: a selected track’s low, mid, and high bass readings sit alongside its spectrum and the batch re-analysis queue.",
-        "alt": "Rekordbox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel."
+        "alt": "RekordBox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel."
       },
       {
         "src": null,
         "assetPath": "/images/projects/rekordbox-bass-notes/rekordbox-notes.png",
-        "title": "Resulting notes in Rekordbox",
-        "caption": "Show how the written results appear in Rekordbox, using suitable sample track data.",
+        "title": "Resulting notes in RekordBox",
+        "caption": "Show how the written results appear in RekordBox, using suitable sample track data.",
         "alt": "",
         "todo": "TODO_MEDIA"
       }
@@ -244,8 +244,8 @@
     "label": "Desktop app / in development",
     "source": "https://github.com/nrrb/music-energy-analyzer",
     "live": null,
-    "problem": "A DJ exploring a music library needs a way to inspect the low-frequency character of tracks. This project focuses on that exploration in a desktop interface.",
-    "role": "I’m developing the desktop app with React and Rust. Its focus is library exploration and track inspection, distinct from the direct Rekordbox database integration of Bass Notes.",
+    "problem": "A DJ exploring a music library needs a way to inspect the sub-sonic character of tracks. This project focuses on that exploration in a desktop interface.",
+    "role": "I’m developing the desktop app with React and Rust. Its focus is library exploration and track inspection, distinct from the direct RekordBox database integration of Bass Notes.",
     "decisions": [
       {
         "decision": "A desktop interface built with React and Rust",
@@ -253,7 +253,7 @@
       },
       {
         "decision": "Track-level inspection as the focus",
-        "purpose": "Help DJs explore the low-frequency characteristics of individual tracks."
+        "purpose": "Help DJs explore the sub-sonic characteristics of individual tracks."
       }
     ],
     "delivered": [
@@ -267,7 +267,7 @@
         "src": "/images/projects/dancefloor-bass-analyzer/track-library.png",
         "assetPath": "/images/projects/dancefloor-bass-analyzer/track-library.png",
         "title": "Track library and detail view",
-        "caption": "The in-development desktop app showing a scanned library, a selected track’s spectrum and spectrogram, and calculated low-frequency measures.",
+        "caption": "The in-development desktop app showing a scanned library, a selected track’s spectrum and spectrogram, and calculated sub-sonic measures.",
         "alt": "Dancefloor Bass Analyzer desktop app with a track list, audio spectrum, spectrogram, and bass-analysis measurements."
       },
       {

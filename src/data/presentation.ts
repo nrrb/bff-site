@@ -60,22 +60,22 @@ export const presentation = {
     },
     {
       eyebrow: '03 / case study',
-      title: 'Rekordbox Bass Notes',
+      title: 'RekordBox Bass Notes',
       project: {
         label: 'Open supporting project page',
         href: '/projects/rekordbox-bass-notes/',
         image: {
           src: '/images/projects/rekordbox-bass-notes/analysis-output.png',
-          alt: 'Rekordbox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel.',
+          alt: 'RekordBox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel.',
           caption: 'Library analysis and batch re-analysis view',
         },
       },
       points: [
-        { label: 'The need', sample: '[Sample: “DJs needed a faster way to identify tracks with strong low-end energy inside the library workflow they already use.”]' },
-        { label: 'My role', sample: '[Sample: “I built the analysis tool and connected its output directly to the Rekordbox database.”]' },
+        { label: 'The need', sample: '[Sample: “DJs needed a faster way to identify tracks that SHAKE the dancers inside the library workflow they already use.”]' },
+        { label: 'My role', sample: '[Sample: “I built the analysis tool and connected its output directly to the RekordBox database.”]' },
         { label: 'Key choice', sample: '[Sample: “Instead of making DJs consult a separate report, I put the bass information where track selection already happens.”]' },
         { label: 'Iteration to describe', sample: '[Add one true example: how you tuned the analysis, validated output, handled database constraints, or improved usability.]' },
-        { label: 'Delivery', sample: '[Sample: “The delivered tool profiles bass characteristics and writes usable results into Rekordbox.”]' },
+        { label: 'Delivery', sample: '[Sample: “The delivered tool profiles bass characteristics and writes usable results into RekordBox.”]' },
       ],
     },
     {
