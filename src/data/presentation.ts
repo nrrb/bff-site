@@ -24,13 +24,6 @@ export const presentation = {
   title: 'A human-centered path from need to use',
   subtitle: 'A portfolio walkthrough for Taiji Thomas, Digital Project Manager',
   notice: '',
-  process: [
-    { name: 'Discover', prompt: '[How did you learn what people needed?]' },
-    { name: 'Define', prompt: '[What did you prioritize or make clear?]' },
-    { name: 'Make', prompt: '[What did you design or build?]' },
-    { name: 'Iterate', prompt: '[What feedback, constraints, or tests changed it?]' },
-    { name: 'Deliver', prompt: '[What shipped and what became easier?]' },
-  ],
   slides: [
     {
       eyebrow: '01 / how I work',

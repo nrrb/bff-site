@@ -122,22 +122,6 @@
         "title": "Original matching interface",
         "caption": "A refreshed interface concept for explaining the preference import, validation, matching, and download workflow. It is independent portfolio work, not represented as a commissioned or adopted Kellogg interface.",
         "alt": "Kellogg Board Fellows Optimizer interface showing a four-step internship matching workflow."
-      },
-      {
-        "src": null,
-        "assetPath": "/images/projects/kellogg-matcher/refreshed-interface.png",
-        "title": "Planned replacement interface",
-        "caption": "Reserved for the independent refresh once it exists. This is not a delivered interface.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
-      },
-      {
-        "src": null,
-        "assetPath": "/images/projects/kellogg-matcher/matching-results.png",
-        "title": "Sample matching results",
-        "caption": "Use fictional data only; show the relationship between ranked input and placement output.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
       }
     ],
     "contentTodos": [
@@ -175,14 +159,6 @@
         "title": "Current page-grid preview",
         "caption": "The live Poster Slicer interface showing image upload, poster dimensions, page count, and a multi-page preview.",
         "alt": "Poster Slicer interface with a large script image divided across a printable grid of pages."
-      },
-      {
-        "src": null,
-        "assetPath": "/images/projects/poster-slicer/exported-pages.png",
-        "title": "Exported poster pages",
-        "caption": "Show real output from the current tool, using an image suitable for public display.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
       }
     ],
     "contentTodos": [
@@ -220,14 +196,6 @@
         "title": "Bass analysis output",
         "caption": "The Bass Notes library view: a selected track’s low, mid, and high bass readings sit alongside its spectrum and the batch re-analysis queue.",
         "alt": "RekordBox Bass Notes desktop app showing a track library, bass scores, spectrum bars, and a batch re-analysis panel."
-      },
-      {
-        "src": null,
-        "assetPath": "/images/projects/rekordbox-bass-notes/rekordbox-notes.png",
-        "title": "Resulting notes in RekordBox",
-        "caption": "Show how the written results appear in RekordBox, using suitable sample track data.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
       }
     ],
     "contentTodos": [
@@ -267,14 +235,6 @@
         "title": "Track library and detail view",
         "caption": "The in-development desktop app showing a scanned library, a selected track’s spectrum and spectrogram, and calculated sub-sonic measures.",
         "alt": "Dancefloor Bass Analyzer desktop app with a track list, audio spectrum, spectrogram, and bass-analysis measurements."
-      },
-      {
-        "src": null,
-        "assetPath": "/images/projects/dancefloor-bass-analyzer/profile-editor.png",
-        "title": "Analysis profile editor",
-        "caption": "Show the current profile controls once their readiness is confirmed.",
-        "alt": "",
-        "todo": "TODO_MEDIA"
       }
     ],
     "contentTodos": [
