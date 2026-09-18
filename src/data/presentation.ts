@@ -37,6 +37,7 @@ export const presentation = {
       project: {
         label: 'Open supporting project page',
         href: '/projects/kellogg-board-fellows-optimizer/',
+        live: 'https://kbfmatcher.surge.sh/',
         image: {
           src: '/images/projects/kellogg-matcher/original-interface.png',
           alt: 'Kellogg Board Fellows Optimizer interface showing a four-step internship matching workflow.',
