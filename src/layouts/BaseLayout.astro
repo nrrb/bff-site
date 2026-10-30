@@ -4,11 +4,13 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'Nicholas Bennett | Software Engineer | Big Friendly Function',
   description = 'Baltimore-based software engineer available for full-time Frontend, Full Stack (JavaScript / Python), and Solutions Engineer roles. View my résumés and projects.',
+  noindex = false,
 } = Astro.props;
 ---
 
@@ -19,6 +21,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="theme-color" content="#16151A" />
 
     <!-- Open Graph -->

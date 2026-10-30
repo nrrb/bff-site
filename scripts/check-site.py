@@ -9,7 +9,7 @@ class Page(HTMLParser):
         super().__init__()
         self.ids, self.links, self.images, self.headings = set(), [], [], []
         self.text = []
-        self.title, self.description, self.canonical = '', '', ''
+        self.title, self.description, self.canonical, self.robots = '', '', '', ''
         self.in_title = False
         self.anchor_depth = 0
         self.feed(path.read_text())
@@ -28,6 +28,7 @@ class Page(HTMLParser):
             self.headings.append(int(tag[1]))
         if tag == 'title': self.in_title = True
         if tag == 'meta' and a.get('name') == 'description': self.description = a['content']
+        if tag == 'meta' and a.get('name') == 'robots': self.robots = a['content']
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical = a['href']
     def handle_endtag(self, tag):
         if tag == 'a': self.anchor_depth -= 1
@@ -39,10 +40,10 @@ class Page(HTMLParser):
 root = Path('dist')
 projects = json.loads(Path('src/data/projects.json').read_text())
 linked_projects = json.loads(Path('src/data/linked-projects.json').read_text())
-routes = ['/'] + [f"/projects/{p['slug']}/" for p in projects]
+routes = ['/', '/restaurants/'] + [f"/projects/{p['slug']}/" for p in projects]
 pages = {route: Page(root / route.lstrip('/') / 'index.html') for route in routes}
 assert len(projects) == 6
-assert len({p.title for p in pages.values()}) == 7
+assert len({p.title for p in pages.values()}) == len(routes)
 for route, page in pages.items():
     assert page.title and page.description and page.canonical.endswith(route), route
     assert page.headings.count(1) == 1 and page.headings[0] == 1, route
@@ -86,4 +87,12 @@ assert {href for href in pages['/'].links if href.endswith('.pdf')} == {
     f'/resumes/nicholas-bennett-{role}.pdf'
     for role in ('frontend-software-engineer', 'full-stack-software-engineer', 'solutions-engineer')
 }
-print(f'PASS: 7 static routes, 6 gallery links, {len(linked_projects)} additional projects with descriptions and website/source links, no duplicate repositories, 3 résumé PDFs, full-time availability metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')
+restaurant = pages['/restaurants/']
+assert restaurant.robots == 'noindex, nofollow'
+assert '/resumes/nicholas-bennett-bartender-foh.pdf' in restaurant.links
+assert any(image['src'] == '/images/nicholas-bennett-restaurants.jpg' for image in restaurant.images)
+assert 'mailto:nicholasbennett.work@gmail.com' in restaurant.links
+assert 'tel:+12244324264' in restaurant.links
+for path in root.rglob('*.html'):
+    assert not any(urlsplit(link).path.rstrip('/') == '/restaurants' for link in Page(path).links), f'Unlisted page linked from {path}'
+print(f'PASS: {len(routes)} static routes including unlisted/noindex restaurant page, 6 gallery links, {len(linked_projects)} additional projects with descriptions and website/source links, no duplicate repositories, 4 résumé PDFs, full-time availability metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')

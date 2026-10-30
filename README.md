@@ -26,7 +26,7 @@ The development server normally runs at `http://localhost:4321`. Astro selects a
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start Astro with live reload (`npm start` is an alias). |
-| `npm run build` | Generate all seven static pages into `dist/`. |
+| `npm run build` | Generate all nine static pages into `dist/`. |
 | `npm run preview` | Serve the production build locally after building. |
 | `npm run check` | Run TypeScript checks; this does not type-check Astro templates. |
 | `npm run check:site` | Check built routes, links, headings, metadata, images, and contact links. Run after building. |
@@ -39,7 +39,7 @@ There is no configured lint task. The site loads its fonts from Google Fonts, so
 
 ## Site structure and content
 
-Astro renders the homepage and six project pages as static HTML. Only the responsive header hydrates as a React island for the mobile menu. No CMS, client-side router, or contact-form backend is required.
+Astro renders the homepage, six project pages, a portfolio presentation, and an unlisted restaurant page as static HTML. Only the responsive header hydrates as a React island for the mobile menu. No CMS, client-side router, or contact-form backend is required.
 
 | Location | What to edit |
 | --- | --- |
@@ -52,7 +52,7 @@ Astro renders the homepage and six project pages as static HTML. Only the respon
 | `src/layouts/BaseLayout.astro` | Document titles, descriptions, canonical URLs, Open Graph metadata, and skip link. |
 | `src/styles/global.css` | Shared styles, focus indicators, spacing, and reduced-motion behavior. |
 | `tailwind.config.mjs` | Charcoal/rose palette and font tokens. |
-| `public/` | Portrait, favicon, project media, and the three supplied PDFs under `resumes/`. Replace those PDFs to update the linked résumés. |
+| `public/` | Portraits, favicon, project media, and four supplied PDFs under `resumes/`. Replace those PDFs to update the linked résumés. |
 | `docs/images/` | README screenshot and its source/image checksum manifest; these are not website assets. |
 | `.githooks/` | Versioned merge and push hooks. |
 
@@ -72,6 +72,10 @@ Each route builds to its own `index.html`, supporting direct loads and refreshes
 The homepage also lists 34 additional projects from [nrrb’s public repositories](https://github.com/nrrb?tab=repositories), in a native expandable list below selected work. The October 29, 2026 snapshot covered all 63 public repositories and included every repository with a nonempty GitHub website field, excluding the five already represented in selected work, this portfolio’s own repository, and Crow & Co. Descriptions come from repository descriptions or READMEs, with the linked websites used when those sources contain no useful summary. Documentation, article, and npm links are labeled accordingly. The listed Ghost Bass Visualizer Replit URL returned 404 during the check and is marked unavailable; npm blocked automated requests with 403.
 
 Edit `src/data/linked-projects.json` to maintain these entries. This is a static content snapshot; the site does not call GitHub at runtime.
+
+### Unlisted restaurant page
+
+`/restaurants/` provides a plain-text introduction, customer-facing experience, the white-wall headshot, contact details, and the bartender/FOH résumé. Edit `src/pages/restaurants.astro` for the copy. Its PDF is `public/resumes/nicholas-bennett-bartender-foh.pdf`, copied unchanged from the supplied résumé. The page has no inbound site links and uses `noindex, nofollow` metadata. It is publicly accessible to anyone with its URL.
 
 ### Adding project media
 
