@@ -70,13 +70,6 @@
     "linkLabel": "Project documentation"
   },
   {
-    "title": "Crow & Co.",
-    "description": "A playful curio-shop interface with fictional curiosities and an “Add to Nest” shopping interaction.",
-    "source": "https://github.com/nrrb/unhingedcrowcontent",
-    "website": "https://crowandco.surge.sh/",
-    "linkLabel": "Website"
-  },
-  {
     "title": "DTG Photo Mask",
     "description": "Image-processing tools that apply geometric transparency masks to reduce ink coverage for direct-to-garment and direct-to-film printing.",
     "source": "https://github.com/nrrb/dtgphotomask",
