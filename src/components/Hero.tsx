@@ -12,8 +12,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap gap-4"><a href="#resumes" className="button-primary">View my résumés</a><a href="#contact" className="button-secondary">Let’s talk about your role</a><a href="#portfolio" className="text-link self-center">Explore my work ↗</a></div>
       </div>
       <figure className="mx-auto w-full max-w-xs">
-        {/* TODO_MEDIA: Replace with a new coworking-office portrait, preserving the existing photograph until supplied. */}
-        <img src="/images/portrait.jpg" alt="Nicholas Bennett" className="h-auto w-full rounded-xl2 border border-white/10" />
+        <img src="/images/portrait.jpg" alt="Nicholas Bennett seated at a table with a laptop" width="1000" height="998" className="h-auto w-full rounded-xl2 border border-white/10" />
         <figcaption className="mt-4 font-mono text-xs text-steel">Nicholas Bennett / Baltimore, MD</figcaption>
       </figure>
     </div>

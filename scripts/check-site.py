@@ -9,6 +9,7 @@ class Page(HTMLParser):
         super().__init__()
         self.ids, self.links, self.images, self.headings = set(), [], [], []
         self.text = []
+        self.meta = {}
         self.title, self.description, self.canonical, self.robots = '', '', '', ''
         self.in_title = False
         self.anchor_depth = 0
@@ -27,6 +28,7 @@ class Page(HTMLParser):
         if tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6'):
             self.headings.append(int(tag[1]))
         if tag == 'title': self.in_title = True
+        if tag == 'meta': self.meta[a.get('property') or a.get('name')] = a.get('content', '')
         if tag == 'meta' and a.get('name') == 'description': self.description = a['content']
         if tag == 'meta' and a.get('name') == 'robots': self.robots = a['content']
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical = a['href']
@@ -49,6 +51,11 @@ for route, page in pages.items():
     assert page.headings.count(1) == 1 and page.headings[0] == 1, route
     assert all(b <= a + 1 for a, b in zip(page.headings, page.headings[1:])), route
     assert 'main-content' in page.ids
+    assert page.meta['og:image'] == 'https://bigfriendlyfunction.com/images/portrait.jpg'
+    assert page.meta['twitter:image'] == page.meta['og:image']
+    assert page.meta['twitter:card'] == 'summary'
+    assert page.meta['og:image:width'] == '1000' and page.meta['og:image:height'] == '998'
+    assert page.meta['og:image:alt'] and page.meta['twitter:image:alt'] == page.meta['og:image:alt']
     for href in page.links:
         assert href, f'Empty link: {route}'
         assert 'wa.me' not in href
@@ -83,6 +90,7 @@ for project in linked_projects:
 assert 'mailto:nicholas@bigfriendlyfunction.com' in pages['/'].links
 assert '/#resumes' in pages['/'].links
 assert 'full-time' in pages['/'].description
+assert any(image['src'] == '/images/portrait.jpg' and image['alt'] == pages['/'].meta['og:image:alt'] for image in pages['/'].images)
 assert {href for href in pages['/'].links if href.endswith('.pdf')} == {
     f'/resumes/nicholas-bennett-{role}.pdf'
     for role in ('frontend-software-engineer', 'full-stack-software-engineer', 'solutions-engineer')
@@ -95,4 +103,4 @@ assert 'mailto:nicholasbennett.work@gmail.com' in restaurant.links
 assert 'tel:+12244324264' in restaurant.links
 for path in root.rglob('*.html'):
     assert not any(urlsplit(link).path.rstrip('/') == '/restaurants' for link in Page(path).links), f'Unlisted page linked from {path}'
-print(f'PASS: {len(routes)} static routes including unlisted/noindex restaurant page, 6 gallery links, {len(linked_projects)} additional projects with descriptions and website/source links, no duplicate repositories, 4 résumé PDFs, full-time availability metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')
+print(f'PASS: {len(routes)} static routes including unlisted/noindex restaurant page, 6 gallery links, {len(linked_projects)} additional projects with descriptions and website/source links, no duplicate repositories, 4 résumé PDFs, full-time availability metadata, homepage portrait and social preview metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')

@@ -84,7 +84,7 @@ Edit `src/data/linked-projects.json` to maintain these entries. This is a static
 3. Set `src` to the public URL, such as `/images/projects/og-blacman/desktop-hero.png`, and supply accurate `alt` text and a factual caption.
 4. Build and regenerate the README screenshot.
 
-Keep `src: null` until an asset exists. A nonexistent local file also renders a labeled placeholder. Images preserve their aspect ratios. See [CONTENT_TODO.md](CONTENT_TODO.md) for missing screenshots, contribution details, credits, the future coworking portrait, and optional recordings. The unverified WhatsApp destination is omitted pending a verified replacement.
+Keep `src: null` until an asset exists. A nonexistent local file also renders a labeled placeholder. Images preserve their aspect ratios. The homepage uses the supplied laptop headshot at `public/images/portrait.jpg`; the shared layout also uses it for Open Graph and Twitter preview images. See [CONTENT_TODO.md](CONTENT_TODO.md) for missing screenshots, contribution details, credits, and optional recordings. The unverified WhatsApp destination is omitted pending a verified replacement.
 
 ## Screenshot and Git workflow
 

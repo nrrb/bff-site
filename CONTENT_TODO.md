@@ -8,11 +8,9 @@ For each media item, place the approved image at `public` + `assetPath`, set `sr
 
 1. Real project screenshots, beginning with OG Blacman and Medium Talk.
 2. Confirm contribution/credits and the project details listed below, especially the original Kellogg workflow.
-3. New coworking-office portrait when available; the current real photograph remains.
 
 | Page / field | Intended asset path | What to supply |
 | --- | --- | --- |
-| Homepage / Hero portrait | `public/images/portrait.jpg` | New coworking-office portrait. |
 | Homepage / Contact | None | Verified WhatsApp destination, only if this option should return. Existing handle was unverified and omitted. |
 | OG Blacman / media: Desktop hero screenshot | `public/images/projects/og-blacman/desktop-hero.png` | Show the real desktop composition and artist identity. |
 | OG Blacman / media: Phone layout and music player | `public/images/projects/og-blacman/phone-player.png` | Show how the mobile composition presents music and playback controls. |
