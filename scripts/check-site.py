@@ -51,6 +51,10 @@ for route, page in pages.items():
         url = urlsplit(href)
         if url.scheme or url.netloc: continue
         target = url.path or route
+        if target.endswith('.pdf'):
+            pdf = root / target.lstrip('/')
+            assert pdf.is_file() and pdf.read_bytes().startswith(b'%PDF-'), f'Missing or invalid PDF: {href}'
+            continue
         assert target in pages, f'Missing route: {href}'
         assert not url.fragment or unquote(url.fragment) in pages[target].ids, href
     for img in page.images:
@@ -62,4 +66,10 @@ for project in projects:
     assert project['source'] in pages[route].links
     if project['live']: assert project['live'] in pages[route].links
 assert 'mailto:nicholas@bigfriendlyfunction.com' in pages['/'].links
-print('PASS: 7 static routes, 6 gallery links, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')
+assert '/#resumes' in pages['/'].links
+assert 'full-time' in pages['/'].description
+assert {href for href in pages['/'].links if href.endswith('.pdf')} == {
+    f'/resumes/nicholas-bennett-{role}.pdf'
+    for role in ('frontend-software-engineer', 'full-stack-software-engineer', 'solutions-engineer')
+}
+print('PASS: 7 static routes, 6 gallery links, 3 résumé PDFs, full-time availability metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')

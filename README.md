@@ -1,12 +1,12 @@
 # Big Friendly Function
 
-Nicholas Bennett’s freelance consulting portfolio for [bigfriendlyfunction.com](https://www.bigfriendlyfunction.com/). Built with Astro 4, React 18, TypeScript, and Tailwind CSS 3.
+Nicholas Bennett’s software engineering portfolio for [bigfriendlyfunction.com](https://www.bigfriendlyfunction.com/). Built with Astro 4, React 18, TypeScript, and Tailwind CSS 3.
 
-The homepage introduces website launches and refreshes, existing-app improvements, and custom workflow tools. It follows hero → services → selected projects → about/process → contact, with a real portrait, charcoal and rose styling, and a restrained function motif. Contact is a working email link, with GitHub and LinkedIn profiles.
+The homepage highlights availability for full-time Frontend Software Engineer, Full Stack Software Engineer (JavaScript / Python), and Solutions Engineer roles. It follows hero → three role-specific PDF résumés → selected projects → experience/approach → contact, with a real portrait, charcoal and rose styling, and a restrained function motif. Contact is a working email link, with GitHub and LinkedIn profiles.
 
 ## Site preview
 
-[![Big Friendly Function homepage showing the function-inspired hero, portrait, services, six projects, about section, and contact](docs/images/homepage.png)](docs/images/homepage.png)
+[![Big Friendly Function homepage showing full-time availability, portrait, three résumés, six projects, experience, and contact](docs/images/homepage.png)](docs/images/homepage.png)
 
 Captured from the local production build with Playwright Chromium at 1440 × 1000, using a full-page screenshot. Regenerate with `npm run screenshot`; the image is a real rendering of the site, including its intentional project-media placeholders.
 
@@ -44,14 +44,14 @@ Astro renders the homepage and six project pages as static HTML. Only the respon
 | Location | What to edit |
 | --- | --- |
 | `src/pages/index.astro` | Homepage section order. |
-| `src/components/` | Header, hero, services, project gallery, about/process, contact, footer, and shared media presentation. |
+| `src/components/` | Header, hero, résumés, project gallery, experience/approach, contact, footer, and shared media presentation. |
 | `src/data/projects.json` | Structured project copy, links, status, decisions, delivered work, plans, media, and content TODOs. |
 | `src/data/projects.ts` | Media validation: absent local images fall back to a deliberate placeholder. |
 | `src/pages/projects/[slug].astro` | Shared project-page template and static route generation. |
 | `src/layouts/BaseLayout.astro` | Document titles, descriptions, canonical URLs, Open Graph metadata, and skip link. |
 | `src/styles/global.css` | Shared styles, focus indicators, spacing, and reduced-motion behavior. |
 | `tailwind.config.mjs` | Charcoal/rose palette and font tokens. |
-| `public/` | Portrait, favicon, and future approved project media. |
+| `public/` | Portrait, favicon, project media, and the three supplied PDFs under `resumes/`. Replace those PDFs to update the linked résumés. |
 | `docs/images/` | README screenshot and its source/image checksum manifest; these are not website assets. |
 | `.githooks/` | Versioned merge and push hooks. |
 
