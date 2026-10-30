@@ -42,13 +42,6 @@
     "linkLabel": "Website"
   },
   {
-    "title": "Ghost Bass Visualizer",
-    "description": "A bass visualizer project hosted on Replit.",
-    "source": "https://github.com/nrrb/GhostBassVisualizer",
-    "website": "https://replit.com/@nrrb/BassVisualizer",
-    "linkLabel": "Replit project (currently unavailable)"
-  },
-  {
     "title": "Uber Analytics",
     "description": "Data collection and analysis exploring insights from 1.5 years of driving Uber in downtown Chicago.",
     "source": "https://github.com/nrrb/uber-analytics-project",
@@ -126,13 +119,6 @@
     "linkLabel": "Project write-up"
   },
   {
-    "title": "Personal Website",
-    "description": "My personal website on GitHub Pages.",
-    "source": "https://github.com/nrrb/nrrb.github.io",
-    "website": "https://nrrb.github.io/",
-    "linkLabel": "Website"
-  },
-  {
     "title": "Blindfolded Brain Dump",
     "description": "A free-association writing app that hides earlier text to keep you writing, with a visible tail and local browser storage.",
     "source": "https://github.com/nrrb/blindfolded-brain-dump",
@@ -182,20 +168,6 @@
     "linkLabel": "Website"
   },
   {
-    "title": "Cheatsheets",
-    "description": "Personal reference notes for programming languages, web development, databases, and command-line tools.",
-    "source": "https://github.com/nrrb/cheatsheets",
-    "website": "https://nrrb.github.io/cheatsheets/",
-    "linkLabel": "Website"
-  },
-  {
-    "title": "Visual Explorations",
-    "description": "A collection of creative coding experiments in visual concepts, including natural branching and root forms.",
-    "source": "https://github.com/nrrb/visual-explorations",
-    "website": "https://nrrb.github.io/visual-explorations/",
-    "linkLabel": "Website"
-  },
-  {
     "title": "Scrolls",
     "description": "Tiling SVG graphics for wallpaper and tattoo design.",
     "source": "https://github.com/nrrb/scrolls",
@@ -208,13 +180,6 @@
     "source": "https://github.com/nrrb/hex-tri-tiling",
     "website": "https://nrrb.github.io/hex-tri-tiling/",
     "linkLabel": "Website"
-  },
-  {
-    "title": "How to Scrape",
-    "description": "Example code accompanying my web-scraping article, covering requests, parsing, browser automation, and data exports.",
-    "source": "https://github.com/nrrb/how-to-scrape",
-    "website": "https://dev.to/nrrb/my-scraping-techniques-that-fetched-millions-of-rows-52j1",
-    "linkLabel": "Article"
   },
   {
     "title": "Subsonic Analyzer",

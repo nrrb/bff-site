@@ -69,7 +69,7 @@ Each route builds to its own `index.html`, supporting direct loads and refreshes
 
 ### Additional GitHub projects
 
-The homepage also lists 34 additional projects from [nrrb’s public repositories](https://github.com/nrrb?tab=repositories), in a native expandable list below selected work. The October 29, 2026 snapshot covered all 63 public repositories and included every repository with a nonempty GitHub website field, excluding the five already represented in selected work, this portfolio’s own repository, and Crow & Co. Descriptions come from repository descriptions or READMEs, with the linked websites used when those sources contain no useful summary. Documentation, article, and npm links are labeled accordingly. The listed Ghost Bass Visualizer Replit URL returned 404 during the check and is marked unavailable; npm blocked automated requests with 403.
+The homepage also lists 29 additional projects curated from [nrrb’s public repositories](https://github.com/nrrb?tab=repositories), in a native expandable list below selected work. The original October 29, 2026 snapshot covered all 63 public repositories and identified repositories with a nonempty GitHub website field; the selection has since been narrowed. Descriptions come from repository descriptions or READMEs, with the linked websites used when those sources contain no useful summary. Documentation and npm links are labeled accordingly. During the original link check, npm blocked automated requests with 403.
 
 Edit `src/data/linked-projects.json` to maintain these entries. This is a static content snapshot; the site does not call GitHub at runtime.
 
