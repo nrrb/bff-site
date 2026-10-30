@@ -35,13 +35,6 @@
     "linkLabel": "Website"
   },
   {
-    "title": "Big Friendly Function",
-    "description": "My software engineering portfolio, built with Astro, React, TypeScript, and Tailwind CSS.",
-    "source": "https://github.com/nrrb/bff-site",
-    "website": "https://www.bigfriendlyfunction.com",
-    "linkLabel": "Website"
-  },
-  {
     "title": "Image to ASCII",
     "description": "A tool for rasterizing image files into ASCII art.",
     "source": "https://github.com/nrrb/Image-to-ASCII",
