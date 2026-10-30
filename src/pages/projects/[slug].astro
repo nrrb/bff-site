@@ -18,7 +18,7 @@ const { project } = Astro.props;
       <h1 class="font-display text-4xl font-semibold tracking-tight sm:text-6xl">{project.title}</h1>
       <p class="mt-6 text-xl leading-relaxed text-paper/80">{project.description}</p>
       <div class="mt-8 flex flex-wrap gap-4">
-        {project.live && <a href={project.live} class="button-primary">Visit live site ↗</a>}
+        {project.live && <a href={project.live} class="button-primary">Visit project website ↗</a>}
         <a href={project.source} class="button-secondary">View source ↗</a>
         {project.originalSource && <a href={project.originalSource} class="button-secondary">Original organization repository ↗</a>}
       </div>

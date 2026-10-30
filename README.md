@@ -2,11 +2,11 @@
 
 Nicholas Bennett’s software engineering portfolio for [bigfriendlyfunction.com](https://www.bigfriendlyfunction.com/). Built with Astro 4, React 18, TypeScript, and Tailwind CSS 3.
 
-The homepage highlights availability for full-time Frontend Software Engineer, Full Stack Software Engineer (JavaScript / Python), and Solutions Engineer roles. It follows hero → three role-specific PDF résumés → selected projects → experience/approach → contact, with a real portrait, charcoal and rose styling, and a restrained function motif. Contact is a working email link, with GitHub and LinkedIn profiles.
+The homepage highlights availability for full-time Frontend Software Engineer, Full Stack Software Engineer (JavaScript / Python), and Solutions Engineer roles. It follows hero → three role-specific PDF résumés → selected projects and more experiments → experience/approach → contact, with a real portrait, charcoal and rose styling, and a restrained function motif. Contact is a working email link, with GitHub and LinkedIn profiles.
 
 ## Site preview
 
-[![Big Friendly Function homepage showing full-time availability, portrait, three résumés, six projects, experience, and contact](docs/images/homepage.png)](docs/images/homepage.png)
+[![Big Friendly Function homepage showing full-time availability, three résumés, selected projects, more experiments, experience, and contact](docs/images/homepage.png)](docs/images/homepage.png)
 
 Captured from the local production build with Playwright Chromium at 1440 × 1000, using a full-page screenshot. Regenerate with `npm run screenshot`; the image is a real rendering of the site, including its intentional project-media placeholders.
 
@@ -46,6 +46,7 @@ Astro renders the homepage and six project pages as static HTML. Only the respon
 | `src/pages/index.astro` | Homepage section order. |
 | `src/components/` | Header, hero, résumés, project gallery, experience/approach, contact, footer, and shared media presentation. |
 | `src/data/projects.json` | Structured project copy, links, status, decisions, delivered work, plans, media, and content TODOs. |
+| `src/data/linked-projects.json` | Additional repositories with project websites, short sourced descriptions, and GitHub links. |
 | `src/data/projects.ts` | Media validation: absent local images fall back to a deliberate placeholder. |
 | `src/pages/projects/[slug].astro` | Shared project-page template and static route generation. |
 | `src/layouts/BaseLayout.astro` | Document titles, descriptions, canonical URLs, Open Graph metadata, and skip link. |
@@ -65,6 +66,12 @@ Project routes:
 - `/projects/dancefloor-bass-analyzer/`
 
 Each route builds to its own `index.html`, supporting direct loads and refreshes on static hosting. The gallery and project pages use the same content. Live-site actions appear only for projects with supplied live URLs; source links are separate. Planned Kellogg and Poster Slicer refinements remain distinct from delivered work, and Dancefloor Bass Analyzer is labeled in development.
+
+### Additional GitHub projects
+
+The homepage also lists 36 additional projects from [nrrb’s public repositories](https://github.com/nrrb?tab=repositories), in a native expandable list below selected work. The October 29, 2026 snapshot covered all 63 public repositories and included every repository with a nonempty GitHub website field, excluding the five already represented in selected work. Descriptions come from repository descriptions or READMEs, with the linked websites used when those sources contain no useful summary. Documentation, article, and npm links are labeled accordingly. The listed Ghost Bass Visualizer Replit URL returned 404 during the check and is marked unavailable; npm blocked automated requests with 403.
+
+Edit `src/data/linked-projects.json` to maintain these entries. This is a static content snapshot; the site does not call GitHub at runtime.
 
 ### Adding project media
 

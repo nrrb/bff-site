@@ -8,6 +8,7 @@ class Page(HTMLParser):
     def __init__(self, path):
         super().__init__()
         self.ids, self.links, self.images, self.headings = set(), [], [], []
+        self.text = []
         self.title, self.description, self.canonical = '', '', ''
         self.in_title = False
         self.anchor_depth = 0
@@ -32,10 +33,12 @@ class Page(HTMLParser):
         if tag == 'a': self.anchor_depth -= 1
         if tag == 'title': self.in_title = False
     def handle_data(self, data):
+        self.text.append(data)
         if self.in_title: self.title += data
 
 root = Path('dist')
 projects = json.loads(Path('src/data/projects.json').read_text())
+linked_projects = json.loads(Path('src/data/linked-projects.json').read_text())
 routes = ['/'] + [f"/projects/{p['slug']}/" for p in projects]
 pages = {route: Page(root / route.lstrip('/') / 'index.html') for route in routes}
 assert len(projects) == 6
@@ -65,6 +68,17 @@ for project in projects:
     assert pages[route].description == project['description']
     assert project['source'] in pages[route].links
     if project['live']: assert project['live'] in pages[route].links
+sources = [project['source'] for project in projects + linked_projects]
+assert len(sources) == len(set(sources)), 'Duplicate project repository'
+homepage_text = ' '.join(pages['/'].text)
+for project in linked_projects:
+    assert project['title'] and project['title'] in homepage_text
+    assert project['description'] and project['description'] in homepage_text
+    assert project['linkLabel'] and project['linkLabel'] in homepage_text
+    for href in (project['source'], project['website']):
+        url = urlsplit(href)
+        assert url.scheme in ('http', 'https') and url.netloc, href
+        assert href in pages['/'].links, f'Missing linked project: {href}'
 assert 'mailto:nicholas@bigfriendlyfunction.com' in pages['/'].links
 assert '/#resumes' in pages['/'].links
 assert 'full-time' in pages['/'].description
@@ -72,4 +86,4 @@ assert {href for href in pages['/'].links if href.endswith('.pdf')} == {
     f'/resumes/nicholas-bennett-{role}.pdf'
     for role in ('frontend-software-engineer', 'full-stack-software-engineer', 'solutions-engineer')
 }
-print('PASS: 7 static routes, 6 gallery links, 3 résumé PDFs, full-time availability metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')
+print(f'PASS: 7 static routes, 6 gallery links, {len(linked_projects)} additional projects with descriptions and website/source links, no duplicate repositories, 3 résumé PDFs, full-time availability metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, and no nested links.')

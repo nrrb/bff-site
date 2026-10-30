@@ -100,7 +100,7 @@
     "description": "Matching MBA talent to corporate board internships, optimally.",
     "label": "Original tool / independent refresh planned",
     "source": "https://github.com/nrrb/internship-matcher",
-    "live": null,
+    "live": "https://kbfmatcher.surge.sh/",
     "problem": "The original organizational task was to match fellows to placements using ranked preferences. A matching tool provides a way to work through those preferences and produce placement results.",
     "role": "I originally built the tool, which was used in a more rudimentary form. My repository is a fork of the organization’s project. Any future portfolio refresh is independent; it is not presented as commissioned or adopted by Kellogg.",
     "decisions": [
@@ -137,7 +137,7 @@
     "description": "Turn an image into a larger poster printed across ordinary sheets of paper.",
     "label": "Independent tool / interface refresh planned",
     "source": "https://github.com/nrrb/poster-slicer",
-    "live": "https://nrrb.github.io/poster-slicer/",
+    "live": "https://posterslicer.surge.sh/",
     "problem": "Printing a large image does not always mean using a large-format printer. This tool is for people who want to assemble a poster from ordinary sheets of paper.",
     "role": "I built Poster Slicer as an independent tool for turning an image into a printable multi-page poster.",
     "decisions": [
@@ -172,7 +172,7 @@
     "description": "Profiles the bass characteristics of music and writes results directly into the RekordBox database, helping DJs identify tracks that SHAKE the dancers.",
     "label": "DJ workflow tool",
     "source": "https://github.com/nrrb/rekordbox-bass-notes",
-    "live": null,
+    "live": "https://nrrb.github.io/rekordbox-bass-notes/",
     "problem": "DJs looking for tracks with strong low-end energy need information they can use in their existing music-library workflow. This tool connects bass analysis to RekordBox.",
     "role": "I built a tool that profiles bass characteristics and writes the results directly into the RekordBox database.",
     "decisions": [
