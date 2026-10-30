@@ -2,6 +2,8 @@ import { projects } from '../data/projects';
 import linkedProjects from '../data/linked-projects.json';
 import ProjectMedia from './ProjectMedia';
 
+const commitDateFormat = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
 export default function Portfolio() {
   return <section id="portfolio" className="section-shell section-space">
     <p className="eyebrow">02 / selected projects</p><h2 className="section-title">Different problems. Thoughtful software.</h2>
@@ -18,7 +20,7 @@ export default function Portfolio() {
       <summary className="mb-6 cursor-pointer font-display text-lg font-semibold text-rose">Explore all {linkedProjects.length} projects</summary>
       <ul className="grid gap-x-10 md:grid-cols-2">{linkedProjects.map((project) =>
         <li key={project.source} className="flex flex-col border-t border-white/10 py-6">
-          <h4 className="font-display text-xl font-semibold">{project.title}</h4>
+          <h4 className="font-display text-xl font-semibold">{project.title}{' '}<time dateTime={project.firstCommitDate} className="whitespace-nowrap text-sm font-normal text-steel">{commitDateFormat.format(new Date(project.firstCommitDate))}</time></h4>
           <p className="mb-5 mt-3 flex-1 leading-relaxed text-paper/75">{project.description}</p>
           <div className="flex flex-wrap gap-6"><a href={project.website} className="text-link" aria-label={`${project.linkLabel}: ${project.title}`}>{project.linkLabel} <span aria-hidden="true">↗</span></a><a href={project.source} className="text-link" aria-label={`GitHub source: ${project.title}`}>GitHub <span aria-hidden="true">↗</span></a></div>
         </li>

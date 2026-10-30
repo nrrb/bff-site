@@ -4,202 +4,231 @@
     "description": "A flashcard app for studying MITRE ATT&CK techniques through synthetic Windows events and spaced repetition.",
     "source": "https://github.com/nrrb/mitre-flash-cards",
     "website": "https://nrrb.github.io/mitre-flash-cards/",
-    "linkLabel": "Website"
-  },
-  {
-    "title": "Tao Te Ching",
-    "description": "English interpretations of Lao Tzu’s Tao Te Ching, presented as a reading website.",
-    "source": "https://github.com/nrrb/tao-te-ching",
-    "website": "https://nrrb.github.io/tao-te-ching/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-10-29T20:51:47Z"
   },
   {
     "title": "Tiny Goose Club",
     "description": "A website for a quiet creative meetup I organize in Baltimore, with event information, shared expectations, and RSVP links.",
     "source": "https://github.com/nrrb/tinygoose.club",
     "website": "http://tinygoose.club/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-10-08T15:46:30Z"
   },
   {
     "title": "Cute QR Code",
     "description": "A Vue app that turns text and URLs into QR codes, with copyable text and downloadable PNG exports.",
     "source": "https://github.com/nrrb/cute-qr-code",
     "website": "https://cute-qr-code.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-10-03T02:36:55Z"
   },
   {
     "title": "Walking Quests",
     "description": "A daily walking-quest app: pick a quest, mark it complete, and revisit past adventures through a calendar.",
     "source": "https://github.com/nrrb/walking-quests",
     "website": "https://walkingquests.surge.sh/",
-    "linkLabel": "Website"
-  },
-  {
-    "title": "Image to ASCII",
-    "description": "A tool for rasterizing image files into ASCII art.",
-    "source": "https://github.com/nrrb/Image-to-ASCII",
-    "website": "http://nrrb.github.io/Image-to-ASCII/",
-    "linkLabel": "Website"
-  },
-  {
-    "title": "Uber Analytics",
-    "description": "Data collection and analysis exploring insights from 1.5 years of driving Uber in downtown Chicago.",
-    "source": "https://github.com/nrrb/uber-analytics-project",
-    "website": "https://nrrb.github.io/uber-analytics-project/",
-    "linkLabel": "Project write-up"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-09-23T01:41:11Z"
   },
   {
     "title": "Inverso",
     "description": "A browser-based design tool that overlays text with colors computed as the inverse of the image underneath, for print-ready artwork.",
     "source": "https://github.com/nrrb/inverso",
     "website": "https://inverso.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-05-21T02:31:46Z"
   },
   {
     "title": "Background Removal for Artists",
     "description": "A browser-based tool for cutting subjects out of photos and saving transparent PNGs, with all image processing on your device.",
     "source": "https://github.com/nrrb/bgremove",
     "website": "https://nrrb.github.io/bgremove/",
-    "linkLabel": "Project documentation"
-  },
-  {
-    "title": "DTG Photo Mask",
-    "description": "Image-processing tools that apply geometric transparency masks to reduce ink coverage for direct-to-garment and direct-to-film printing.",
-    "source": "https://github.com/nrrb/dtgphotomask",
-    "website": "https://dtgphotomask.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Project documentation",
+    "firstCommitDate": "2026-05-19T23:15:03Z"
   },
   {
     "title": "Black & White Image Tools",
     "description": "Python tools for converting images to black and white, creating transparent variants, and isolating dominant colors.",
     "source": "https://github.com/nrrb/blackwhiteimage",
     "website": "https://nrrb.github.io/blackwhiteimage/",
-    "linkLabel": "Project documentation"
+    "linkLabel": "Project documentation",
+    "firstCommitDate": "2026-05-08T20:40:21Z"
+  },
+  {
+    "title": "DTG Photo Mask",
+    "description": "Image-processing tools that apply geometric transparency masks to reduce ink coverage for direct-to-garment and direct-to-film printing.",
+    "source": "https://github.com/nrrb/dtgphotomask",
+    "website": "https://dtgphotomask.surge.sh/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-04-24T03:13:45Z"
   },
   {
     "title": "PixelSVG",
     "description": "A browser-based pixel drawing app with local documents, selection and paste tools, and SVG import and export.",
     "source": "https://github.com/nrrb/pixelsvg",
     "website": "https://pixelsvg.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-04-17T02:25:32Z"
   },
   {
     "title": "Chrome Console ANSI",
     "description": "A client-side ANSI art inspector that decodes .ANS files and checks whether Chrome DevTools can print their escape sequences.",
     "source": "https://github.com/nrrb/chrome-console-ansi",
     "website": "https://chrome-console-ansi.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-04-02T18:00:41Z"
   },
   {
     "title": "IFS Shirt",
     "description": "A fractal design tool with fern, Sierpinski, snowflake, and dragon patterns, adjustable colors, and PNG export.",
     "source": "https://github.com/nrrb/ifs-shirt",
     "website": "https://ifs-shirt.surge.sh/",
-    "linkLabel": "Website"
-  },
-  {
-    "title": "Markdown Splitter",
-    "description": "A command-line tool that turns a long Markdown file into linked HTML pages with a table of contents and syntax highlighting.",
-    "source": "https://github.com/nrrb/markdown-splitter",
-    "website": "https://www.npmjs.com/package/@beautifullife/markdown-splitter",
-    "linkLabel": "npm package"
-  },
-  {
-    "title": "Beautiful Words",
-    "description": "A browser-based typography experiment presenting quotations in decorative script.",
-    "source": "https://github.com/nrrb/beautifulwords",
-    "website": "https://nrrb.github.io/beautifulwords/",
-    "linkLabel": "Website"
-  },
-  {
-    "title": "Music Analysis",
-    "description": "Tools for exploring low-frequency energy in music, including browser visualizations and Python analysis of a DJ library.",
-    "source": "https://github.com/nrrb/musicanalysis",
-    "website": "https://nrrb.github.io/musicanalysis/",
-    "linkLabel": "Project write-up"
+    "linkLabel": "Website",
+    "firstCommitDate": "2026-03-30T00:18:35Z"
   },
   {
     "title": "Blindfolded Brain Dump",
     "description": "A free-association writing app that hides earlier text to keep you writing, with a visible tail and local browser storage.",
     "source": "https://github.com/nrrb/blindfolded-brain-dump",
     "website": "https://blindfoldedbraindump.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-11-18T19:20:36Z"
   },
   {
     "title": "Grid Surface Warper",
     "description": "An interactive grid-warping experiment with adjustable spacing, surface functions, and parameters.",
     "source": "https://github.com/nrrb/grid-surface-warper",
     "website": "https://nrrb.github.io/grid-surface-warper/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-07-28T14:02:03Z"
   },
   {
     "title": "Slugtoy",
     "description": "A full-screen particle-field visual experiment built with Vue 3 and Vite.",
     "source": "https://github.com/nrrb/slugtoy",
     "website": "https://nrrb.github.io/slugtoy/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-07-17T17:20:44Z"
   },
   {
-    "title": "Spacey",
-    "description": "A starfield paired with procedurally generated spacey music.",
-    "source": "https://github.com/nrrb/spacey",
-    "website": "https://nrrb.github.io/spacey/",
-    "linkLabel": "Website"
+    "title": "Beautiful Words",
+    "description": "A browser-based typography experiment presenting quotations in decorative script.",
+    "source": "https://github.com/nrrb/beautifulwords",
+    "website": "https://nrrb.github.io/beautifulwords/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-07-08T21:04:08Z"
   },
   {
     "title": "Timewarp",
     "description": "An experimental digital clock exploring the question, “What even is time?”",
     "source": "https://github.com/nrrb/timewarp",
     "website": "https://nrrb.github.io/timewarp/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-07-01T13:38:13Z"
   },
   {
     "title": "BurningText",
     "description": "A Vue component that renders text with a dynamic fire effect using noise and simulated heat diffusion.",
     "source": "https://github.com/nrrb/burningtext",
     "website": "https://nrrb.github.io/burningtext/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-04-28T03:00:21Z"
   },
   {
     "title": "Voxel Fire",
     "description": "The classic demoscene fire effect rendered in 3D with voxels and Three.js.",
     "source": "https://github.com/nrrb/voxelfire",
     "website": "https://nrrb.github.io/voxelfire/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-04-27T23:34:49Z"
   },
   {
-    "title": "Scrolls",
-    "description": "Tiling SVG graphics for wallpaper and tattoo design.",
-    "source": "https://github.com/nrrb/scrolls",
-    "website": "https://nrrb.github.io/scrolls/",
-    "linkLabel": "Website"
+    "title": "Markdown Splitter",
+    "description": "A command-line tool that turns a long Markdown file into linked HTML pages with a table of contents and syntax highlighting.",
+    "source": "https://github.com/nrrb/markdown-splitter",
+    "website": "https://www.npmjs.com/package/@beautifullife/markdown-splitter",
+    "linkLabel": "npm package",
+    "firstCommitDate": "2025-04-24T02:09:13Z"
   },
   {
-    "title": "Hexagonal & Triangular Graph Paper",
-    "description": "A browser-based generator for printable hexagonal and triangular graph paper, exported as PDFs.",
-    "source": "https://github.com/nrrb/hex-tri-tiling",
-    "website": "https://nrrb.github.io/hex-tri-tiling/",
-    "linkLabel": "Website"
+    "title": "Spacey",
+    "description": "A starfield paired with procedurally generated spacey music.",
+    "source": "https://github.com/nrrb/spacey",
+    "website": "https://nrrb.github.io/spacey/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-04-23T21:15:20Z"
   },
   {
     "title": "Subsonic Analyzer",
     "description": "A browser tool for uploading MP3 files and calculating their low-frequency energy in the 20–150 Hz range.",
     "source": "https://github.com/nrrb/subsonic-analyzer",
     "website": "https://nrrb.github.io/subsonic-analyzer/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-04-20T01:35:36Z"
   },
   {
-    "title": "Fatal Car Crashes",
-    "description": "An exploration of fatal traffic-crash data, with tools for converting and preparing records for mapping and analysis.",
-    "source": "https://github.com/nrrb/fatal-car-crashes",
-    "website": "http://nrrb.github.io/fatal-car-crashes/",
-    "linkLabel": "Project write-up"
+    "title": "Music Analysis",
+    "description": "Tools for exploring low-frequency energy in music, including browser visualizations and Python analysis of a DJ library.",
+    "source": "https://github.com/nrrb/musicanalysis",
+    "website": "https://nrrb.github.io/musicanalysis/",
+    "linkLabel": "Project write-up",
+    "firstCommitDate": "2025-04-15T00:27:23Z"
+  },
+  {
+    "title": "Scrolls",
+    "description": "Tiling SVG graphics for wallpaper and tattoo design.",
+    "source": "https://github.com/nrrb/scrolls",
+    "website": "https://nrrb.github.io/scrolls/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-03-09T03:23:56Z"
+  },
+  {
+    "title": "Uber Analytics",
+    "description": "Data collection and analysis exploring insights from 1.5 years of driving Uber in downtown Chicago.",
+    "source": "https://github.com/nrrb/uber-analytics-project",
+    "website": "https://nrrb.github.io/uber-analytics-project/",
+    "linkLabel": "Project write-up",
+    "firstCommitDate": "2025-03-05T18:07:12Z"
+  },
+  {
+    "title": "Hexagonal & Triangular Graph Paper",
+    "description": "A browser-based generator for printable hexagonal and triangular graph paper, exported as PDFs.",
+    "source": "https://github.com/nrrb/hex-tri-tiling",
+    "website": "https://nrrb.github.io/hex-tri-tiling/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2025-02-28T18:50:57Z"
   },
   {
     "title": "Emoji Bouquet",
     "description": "A tool for arranging emojis into bouquets and other patterns.",
     "source": "https://github.com/nrrb/emoji-bouquet",
     "website": "https://emojibouquet.surge.sh/",
-    "linkLabel": "Website"
+    "linkLabel": "Website",
+    "firstCommitDate": "2020-11-17T17:37:31Z"
+  },
+  {
+    "title": "Tao Te Ching",
+    "description": "English interpretations of Lao Tzu’s Tao Te Ching, presented as a reading website.",
+    "source": "https://github.com/nrrb/tao-te-ching",
+    "website": "https://nrrb.github.io/tao-te-ching/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2017-07-22T22:02:50Z"
+  },
+  {
+    "title": "Fatal Car Crashes",
+    "description": "An exploration of fatal traffic-crash data, with tools for converting and preparing records for mapping and analysis.",
+    "source": "https://github.com/nrrb/fatal-car-crashes",
+    "website": "http://nrrb.github.io/fatal-car-crashes/",
+    "linkLabel": "Project write-up",
+    "firstCommitDate": "2014-01-09T05:03:40Z"
+  },
+  {
+    "title": "Image to ASCII",
+    "description": "A tool for rasterizing image files into ASCII art.",
+    "source": "https://github.com/nrrb/Image-to-ASCII",
+    "website": "http://nrrb.github.io/Image-to-ASCII/",
+    "linkLabel": "Website",
+    "firstCommitDate": "2010-11-29T02:02:36Z"
   }
 ]

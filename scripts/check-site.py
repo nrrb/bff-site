@@ -1,5 +1,6 @@
 """Validate the built portfolio without extra dependencies: npm run build first."""
 import json
+from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
@@ -10,6 +11,8 @@ class Page(HTMLParser):
         self.ids, self.links, self.images, self.headings = set(), [], [], []
         self.text = []
         self.meta = {}
+        self.times = []
+        self.in_time = False
         self.title, self.description, self.canonical = '', '', ''
         self.in_title = False
         self.anchor_depth = 0
@@ -28,15 +31,20 @@ class Page(HTMLParser):
         if tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6'):
             self.headings.append(int(tag[1]))
         if tag == 'title': self.in_title = True
+        if tag == 'time':
+            self.in_time = True
+            self.times.append({'datetime': a.get('datetime', ''), 'text': ''})
         if tag == 'meta': self.meta[a.get('property') or a.get('name')] = a.get('content', '')
         if tag == 'meta' and a.get('name') == 'description': self.description = a['content']
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical = a['href']
     def handle_endtag(self, tag):
         if tag == 'a': self.anchor_depth -= 1
         if tag == 'title': self.in_title = False
+        if tag == 'time': self.in_time = False
     def handle_data(self, data):
         self.text.append(data)
         if self.in_title: self.title += data
+        if self.in_time: self.times[-1]['text'] += data
 
 root = Path('dist')
 projects = json.loads(Path('src/data/projects.json').read_text())
@@ -78,6 +86,12 @@ for project in projects:
 sources = [project['source'] for project in projects + linked_projects]
 assert len(sources) == len(set(sources)), 'Duplicate project repository'
 homepage_text = ' '.join(pages['/'].text)
+commit_dates = [datetime.strptime(project['firstCommitDate'], '%Y-%m-%dT%H:%M:%SZ') for project in linked_projects]
+assert commit_dates == sorted(commit_dates, reverse=True), 'Project first-commit dates must be newest first'
+assert pages['/'].times == [
+    {'datetime': project['firstCommitDate'], 'text': date.strftime('%B %Y')}
+    for project, date in zip(linked_projects, commit_dates)
+], 'Rendered project dates must match their initial commits'
 for project in linked_projects:
     assert project['title'] and project['title'] in homepage_text
     assert project['description'] and project['description'] in homepage_text
@@ -104,4 +118,4 @@ for path in root.rglob('*.html'):
     assert not any(urlsplit(link).path.rstrip('/') == '/restaurants' for link in page.links), f'Removed restaurant page linked from {path}'
     assert 'mailto:nicholasbennett.work@gmail.com' not in page.links
     assert 'tel:+12244324264' not in page.links
-print(f'PASS: {len(routes)} static routes, 6 gallery links, {len(linked_projects)} additional projects with descriptions and website/source links, no duplicate repositories, 3 résumé PDFs, full-time availability metadata, homepage portrait and social preview metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, no nested links, and migrated restaurant content removed.')
+print(f'PASS: {len(routes)} static routes, 6 gallery links, {len(linked_projects)} additional projects with month/year dates ordered newest first, descriptions and website/source links, no duplicate repositories, 3 résumé PDFs, full-time availability metadata, homepage portrait and social preview metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, no nested links, and migrated restaurant content removed.')

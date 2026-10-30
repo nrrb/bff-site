@@ -46,7 +46,7 @@ Astro renders the homepage, six project pages, and a portfolio presentation as s
 | `src/pages/index.astro` | Homepage section order. |
 | `src/components/` | Header, hero, résumés, project gallery, experience/approach, contact, footer, and shared media presentation. |
 | `src/data/projects.json` | Structured project copy, links, status, decisions, delivered work, plans, media, and content TODOs. |
-| `src/data/linked-projects.json` | Additional repositories with project websites, short sourced descriptions, and GitHub links. |
+| `src/data/linked-projects.json` | Additional repositories with project websites, short sourced descriptions, initial-commit dates, and GitHub links. |
 | `src/data/projects.ts` | Media validation: absent local images fall back to a deliberate placeholder. |
 | `src/pages/projects/[slug].astro` | Shared project-page template and static route generation. |
 | `src/layouts/BaseLayout.astro` | Document titles, descriptions, canonical URLs, Open Graph metadata, and skip link. |
@@ -71,7 +71,9 @@ Each route builds to its own `index.html`, supporting direct loads and refreshes
 
 The homepage also lists 29 additional projects curated from [nrrb’s public repositories](https://github.com/nrrb?tab=repositories), in a native expandable list below selected work. The original October 29, 2026 snapshot covered all 63 public repositories and identified repositories with a nonempty GitHub website field; the selection has since been narrowed. Descriptions come from repository descriptions or READMEs, with the linked websites used when those sources contain no useful summary. Documentation and npm links are labeled accordingly. During the original link check, npm blocked automated requests with 403.
 
-Edit `src/data/linked-projects.json` to maintain these entries. This is a static content snapshot; the site does not call GitHub at runtime.
+Each additional project shows the month and year of its first commit beside its name. `firstCommitDate` records the author timestamp of the oldest commit in the repository’s default-branch history, verified as a root commit through GitHub on October 30, 2026. Entries are stored newest first by that full timestamp; displayed dates use UTC to keep the month consistent across environments.
+
+Edit `src/data/linked-projects.json` to maintain these entries and preserve the descending date order. This is a static content snapshot; the site does not call GitHub at runtime.
 
 ### Separate food-service site
 
