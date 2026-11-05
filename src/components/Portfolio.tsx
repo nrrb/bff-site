@@ -6,7 +6,8 @@ const commitDateFormat = new Intl.DateTimeFormat('en-US', { month: 'long', year:
 
 export default function Portfolio() {
   return <section id="portfolio" className="section-shell section-space">
-    <p className="eyebrow">02 / selected projects</p><h2 className="section-title">Different problems. Thoughtful software.</h2>
+    <p className="eyebrow">02 / selected projects</p><h2 className="section-title">Curious about technology. Interested in people.</h2>
+    <p className="mb-10 max-w-2xl text-lg leading-relaxed text-paper/80">Cybersecurity learning, creative community, and better conversations. These projects show how I work through technical problems and make room for people.</p>
     <div className="grid gap-7 sm:grid-cols-2">{projects.map((project) =>
       <article key={project.slug} className="flex flex-col overflow-hidden rounded-xl2 border border-white/10 bg-ink-soft transition-colors hover:border-rose/50">
         <ProjectMedia media={project.media[0]} compact />

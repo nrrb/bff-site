@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "bigfriendlyfunction.com" }],
+      "destination": "https://nicholasbennett.work/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.bigfriendlyfunction.com" }],
+      "destination": "https://nicholasbennett.work/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nicholasbennett.work" }],
+      "destination": "https://nicholasbennett.work/:path*",
+      "permanent": true
+    }
+  ]
+}

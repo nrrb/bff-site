@@ -1,54 +1,77 @@
 [
   {
-    "slug": "og-blacman",
-    "title": "OG Blacman",
-    "description": "An artist website with dedicated desktop and mobile experiences.",
-    "label": "Artist website",
-    "source": "https://github.com/nrrb/ogblacman",
-    "live": "https://www.ogblacman.com/",
-    "problem": "An artist’s website needs to express a distinctive identity while giving visitors a way to explore music and media on the device they have with them.",
-    "role": "I built the artist website, including dedicated desktop and mobile experiences. Credits for supplied art, music, and other collaborators still need to be added.",
+    "slug": "mitre-attack-flashcards",
+    "title": "MITRE ATT&CK Flashcards",
+    "description": "An independent cybersecurity learning app I built to explore ATT&CK techniques and sub-techniques, security events, and threat detection concepts.",
+    "label": "Independent cybersecurity learning project",
+    "source": "https://github.com/nrrb/mitre-flash-cards",
+    "live": "https://nrrb.github.io/mitre-flash-cards/",
+    "problem": "Learning a security framework takes more than memorizing names. I wanted a way to explore ATT&CK techniques and sub-techniques alongside security events and threat detection concepts.",
+    "role": "I independently built the learning application as a way to deepen my cybersecurity understanding and make the material easier to revisit.",
     "decisions": [
       {
-        "decision": "Dedicated desktop and mobile compositions",
-        "purpose": "Give the artist’s identity room to work at different screen sizes."
+        "decision": "Flashcards as a learning format",
+        "purpose": "Break a broad cybersecurity framework into focused concepts to study and revisit."
       },
       {
-        "decision": "Music and media within the site",
-        "purpose": "Let visitors explore the artist’s work in context."
+        "decision": "Connect techniques with security events",
+        "purpose": "Explore the relationship between ATT&CK terminology and the events involved in threat detection."
       }
     ],
     "delivered": [
-      "An artist website available at ogblacman.com, with dedicated desktop and mobile experiences."
+      "A public cybersecurity learning application for exploring ATT&CK techniques, sub-techniques, security events, and threat detection concepts."
     ],
-    "planned": [
-      "An annotated desktop/mobile design walkthrough, starting with static images and visible explanations."
-    ],
+    "planned": [],
     "media": [
       {
-        "src": "/images/projects/og-blacman/desktop-hero.png",
-        "assetPath": "/images/projects/og-blacman/desktop-hero.png",
-        "title": "Desktop hero screenshot",
-        "caption": "Hero composition for the live artist website, combining supplied photography and the OG Blacman wordmark.",
-        "alt": "OG Blacman artist website hero with a red stairwell scene and oversized hand-drawn wordmark."
-      },
-      {
-        "src": "/images/projects/og-blacman/music-player-loop.webm",
-        "assetPath": "/images/projects/og-blacman/music-player-loop.webm",
-        "title": "Phone layout and music player",
-        "caption": "A six-second looping walkthrough of the artist’s custom phone-line player and live spectrum analyzer.",
-        "alt": "OG Blacman music page with a video player and a stylized telephone music player."
+        "src": "/images/projects/mitre-attack-flashcards/learning-app.png",
+        "assetPath": "/images/projects/mitre-attack-flashcards/learning-app.png",
+        "title": "MITRE ATT&CK Flashcards learning app",
+        "caption": "The live independent learning application. It is a study project, not a production threat detection platform.",
+        "alt": "MITRE ATT&CK Flashcards cybersecurity learning application."
       }
     ],
-    "contentTodos": [
-      "I’m awaiting client direction to add third-party merch links, event listings through Posh, and updates for future song releases."
+    "contentTodos": []
+  },
+  {
+    "slug": "tiny-goose-club",
+    "title": "Tiny Goose Club",
+    "description": "A biweekly public creative meetup in Baltimore that I organize and host. A little structure, a welcoming space, and time to make something together.",
+    "label": "Community organizing & creative meetup",
+    "source": "https://github.com/nrrb/tinygoose.club",
+    "live": "https://tinygoose.club/",
+    "problem": "Making time for a creative project can be easier with company. Tiny Goose Club gives people in Baltimore a regular public meetup where they can bring something to work on and get to know one another.",
+    "role": "I organize and host the biweekly meetup, and built its website to share event information, expectations, and RSVP links.",
+    "decisions": [
+      {
+        "decision": "A regular gathering open to the public",
+        "purpose": "Give people a recurring opportunity to make things and build connections."
+      },
+      {
+        "decision": "Event information and expectations in one place",
+        "purpose": "Help someone new understand the meetup and find a way to join."
+      }
     ],
-    "contact": "Need a website that feels like you? Tell me about your identity, content, and the people you want to reach."
+    "delivered": [
+      "A biweekly public creative meetup in Baltimore that I organize and host.",
+      "A public website with meetup information and RSVP links."
+    ],
+    "planned": [],
+    "media": [
+      {
+        "src": "/images/projects/tiny-goose-club/meetup-website.png",
+        "assetPath": "/images/projects/tiny-goose-club/meetup-website.png",
+        "title": "Tiny Goose Club meetup website",
+        "caption": "The live meetup website, with information for people interested in joining the creative gathering.",
+        "alt": "Tiny Goose Club website for a public creative meetup in Baltimore."
+      }
+    ],
+    "contentTodos": []
   },
   {
     "slug": "medium-talk",
     "title": "Medium Talk",
-    "description": "A conversation app I built for a public picnic I hosted through Meetup in a Baltimore park, helping strangers get to know one another.",
+    "description": "A conversation app I developed to help people connect, starting with a public picnic I organized in a Baltimore park.",
     "label": "Independent community project",
     "source": "https://github.com/nrrb/mediumtalk",
     "live": "https://mediumtalk.org/",
@@ -95,9 +118,55 @@
     "contact": "Have an idea that brings people together? Tell me about the setting and how software could help."
   },
   {
+    "slug": "og-blacman",
+    "title": "OG Blacman",
+    "description": "An artist website I built by working with the artist and his team to turn creative direction into dedicated desktop and mobile experiences.",
+    "label": "Artist website",
+    "source": "https://github.com/nrrb/ogblacman",
+    "live": "https://www.ogblacman.com/",
+    "problem": "An artist’s website needs to express a distinctive identity while giving visitors a way to explore music and media on the device they have with them.",
+    "role": "I built the artist website, including dedicated desktop and mobile experiences. Credits for supplied art, music, and other collaborators still need to be added.",
+    "decisions": [
+      {
+        "decision": "Dedicated desktop and mobile compositions",
+        "purpose": "Give the artist’s identity room to work at different screen sizes."
+      },
+      {
+        "decision": "Music and media within the site",
+        "purpose": "Let visitors explore the artist’s work in context."
+      }
+    ],
+    "delivered": [
+      "An artist website available at ogblacman.com, with dedicated desktop and mobile experiences."
+    ],
+    "planned": [
+      "An annotated desktop/mobile design walkthrough, starting with static images and visible explanations."
+    ],
+    "media": [
+      {
+        "src": "/images/projects/og-blacman/desktop-hero.png",
+        "assetPath": "/images/projects/og-blacman/desktop-hero.png",
+        "title": "Desktop hero screenshot",
+        "caption": "Hero composition for the live artist website, combining supplied photography and the OG Blacman wordmark.",
+        "alt": "OG Blacman artist website hero with a red stairwell scene and oversized hand-drawn wordmark."
+      },
+      {
+        "src": "/images/projects/og-blacman/music-player-loop.webm",
+        "assetPath": "/images/projects/og-blacman/music-player-loop.webm",
+        "title": "Phone layout and music player",
+        "caption": "A six-second looping walkthrough of the artist’s custom phone-line player and live spectrum analyzer.",
+        "alt": "OG Blacman music page with a video player and a stylized telephone music player."
+      }
+    ],
+    "contentTodos": [
+      "I’m awaiting client direction to add third-party merch links, event listings through Posh, and updates for future song releases."
+    ],
+    "contact": "Need a website that feels like you? Tell me about your identity, content, and the people you want to reach."
+  },
+  {
     "slug": "kellogg-board-fellows-optimizer",
     "title": "Kellogg Board Fellows Optimizer",
-    "description": "Matching MBA talent to corporate board internships, optimally.",
+    "description": "A tool I built to help administrators match MBA fellows to board internships using ranked preferences.",
     "label": "Original tool / independent refresh planned",
     "source": "https://github.com/nrrb/internship-matcher",
     "live": "https://kbfmatcher.surge.sh/",

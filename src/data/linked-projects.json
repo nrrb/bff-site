@@ -1,21 +1,5 @@
 [
   {
-    "title": "MITRE ATT&CK Flash Cards",
-    "description": "A flashcard app for studying MITRE ATT&CK techniques through synthetic Windows events and spaced repetition.",
-    "source": "https://github.com/nrrb/mitre-flash-cards",
-    "website": "https://nrrb.github.io/mitre-flash-cards/",
-    "linkLabel": "Website",
-    "firstCommitDate": "2026-10-29T20:51:47Z"
-  },
-  {
-    "title": "Tiny Goose Club",
-    "description": "A website for a quiet creative meetup I organize in Baltimore, with event information, shared expectations, and RSVP links.",
-    "source": "https://github.com/nrrb/tinygoose.club",
-    "website": "http://tinygoose.club/",
-    "linkLabel": "Website",
-    "firstCommitDate": "2026-10-08T15:46:30Z"
-  },
-  {
     "title": "Cute QR Code",
     "description": "A Vue app that turns text and URLs into QR codes, with copyable text and downloadable PNG exports.",
     "source": "https://github.com/nrrb/cute-qr-code",

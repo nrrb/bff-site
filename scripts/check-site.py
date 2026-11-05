@@ -4,6 +4,7 @@ from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
+from xml.etree import ElementTree
 
 class Page(HTMLParser):
     def __init__(self, path):
@@ -51,14 +52,17 @@ projects = json.loads(Path('src/data/projects.json').read_text())
 linked_projects = json.loads(Path('src/data/linked-projects.json').read_text())
 routes = ['/', '/presentation/'] + [f"/projects/{p['slug']}/" for p in projects]
 pages = {route: Page(root / route.lstrip('/') / 'index.html') for route in routes}
-assert len(projects) == 6
+site = 'https://nicholasbennett.work'
+assert [project['slug'] for project in projects[:3]] == ['mitre-attack-flashcards', 'tiny-goose-club', 'medium-talk']
 assert len({p.title for p in pages.values()}) == len(routes)
 for route, page in pages.items():
-    assert page.title and page.description and page.canonical.endswith(route), route
+    assert page.title and page.description and page.canonical == site + route, route
+    assert page.meta['og:url'] == page.canonical, route
+    assert page.meta['og:title'] == page.title and page.meta['og:description'] == page.description, route
     assert page.headings.count(1) == 1 and page.headings[0] == 1, route
     assert all(b <= a + 1 for a, b in zip(page.headings, page.headings[1:])), route
     assert 'main-content' in page.ids
-    assert page.meta['og:image'] == 'https://bigfriendlyfunction.com/images/portrait.jpg'
+    assert page.meta['og:image'] == site + '/images/portrait.jpg'
     assert page.meta['twitter:image'] == page.meta['og:image']
     assert page.meta['twitter:card'] == 'summary'
     assert page.meta['og:image:width'] == '1000' and page.meta['og:image:height'] == '998'
@@ -85,7 +89,7 @@ for project in projects:
     if project['live']: assert project['live'] in pages[route].links
 sources = [project['source'] for project in projects + linked_projects]
 assert len(sources) == len(set(sources)), 'Duplicate project repository'
-homepage_text = ' '.join(pages['/'].text)
+homepage_text = ' '.join(' '.join(pages['/'].text).split())
 commit_dates = [datetime.strptime(project['firstCommitDate'], '%Y-%m-%dT%H:%M:%SZ') for project in linked_projects]
 assert commit_dates == sorted(commit_dates, reverse=True), 'Project first-commit dates must be newest first'
 assert pages['/'].times == [
@@ -101,21 +105,37 @@ for project in linked_projects:
         assert url.scheme in ('http', 'https') and url.netloc, href
         assert href in pages['/'].links, f'Missing linked project: {href}'
 assert 'mailto:nicholas@bigfriendlyfunction.com' in pages['/'].links
-assert '/#resumes' in pages['/'].links
+assert '/#focus' in pages['/'].links
+assert {'resumes', 'services'} <= pages['/'].ids, 'Preserve old section anchors'
+assert 'Good with code. Even better with people.' in homepage_text
+assert 'Customer Success Management' in homepage_text
+assert 'moving into customer success' in pages['/'].title.lower()
+assert all(term in homepage_text for term in ('CyberMaxx', 'May 2025 to November 2026', '16 years', 'Elastic', 'Devo', 'AlienVault USM', 'MITRE ATT&CK', '4,000 Uber rides', 'Trader Joe’s'))
+assert not any(role in homepage_text for role in ('Frontend Software Engineer', 'Full Stack Software Engineer', 'Solutions Engineer'))
 assert 'full-time' in pages['/'].description
 assert any(image['src'] == '/images/portrait.jpg' and image['alt'] == pages['/'].meta['og:image:alt'] for image in pages['/'].images)
-assert {href for href in pages['/'].links if href.endswith('.pdf')} == {
-    f'/resumes/nicholas-bennett-{role}.pdf'
-    for role in ('frontend-software-engineer', 'full-stack-software-engineer', 'solutions-engineer')
-}
+assert not any(href.endswith('.pdf') for href in pages['/'].links), 'Old engineering résumés should not compete with Customer Success positioning'
 assert {path.relative_to(root).as_posix() for path in root.rglob('index.html')} == {
     route.lstrip('/') + 'index.html' for route in routes
 }, 'Unexpected generated routes'
 assert len(list((root / 'resumes').glob('*.pdf'))) == 3
+for pdf in (root / 'resumes').glob('*.pdf'):
+    assert pdf.read_bytes().startswith(b'%PDF-'), f'Invalid archived résumé: {pdf}'
+sitemap = ElementTree.parse(root / 'sitemap.xml')
+locations = [loc.text for loc in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+assert sorted(locations) == sorted(site + route for route in routes), 'Sitemap must include every canonical page exactly once'
+assert (root / 'robots.txt').read_text() == f'User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n'
+redirects = json.loads(Path('vercel.json').read_text())['redirects']
+assert len(redirects) == 3
+assert {tuple((condition['type'], condition['value']) for condition in rule['has']) for rule in redirects} == {
+    (('host', host),) for host in ('bigfriendlyfunction.com', 'www.bigfriendlyfunction.com', 'www.nicholasbennett.work')
+}, 'Redirect aliases only; never redirect the canonical host'
+for rule in redirects:
+    assert rule['source'] == '/:path*' and rule['destination'] == site + '/:path*' and rule['permanent'] is True
 assert not (root / 'images/nicholas-bennett-restaurants.jpg').exists()
 for path in root.rglob('*.html'):
     page = Page(path)
     assert not any(urlsplit(link).path.rstrip('/') == '/restaurants' for link in page.links), f'Removed restaurant page linked from {path}'
     assert 'mailto:nicholasbennett.work@gmail.com' not in page.links
     assert 'tel:+12244324264' not in page.links
-print(f'PASS: {len(routes)} static routes, 6 gallery links, {len(linked_projects)} additional projects with month/year dates ordered newest first, descriptions and website/source links, no duplicate repositories, 3 résumé PDFs, full-time availability metadata, homepage portrait and social preview metadata, all local anchors, unique titles, descriptions, canonical URLs, heading hierarchy, contact links, images, no nested links, and migrated restaurant content removed.')
+print(f'PASS: {len(routes)} static pages, {len(projects)} gallery links with cybersecurity/community projects first, {len(linked_projects)} additional projects with ordered dates, no duplicate repositories, Customer Success positioning, preserved résumé PDFs and legacy anchors, canonical/OG/social metadata on the new domain, sitemap and robots.txt, permanent redirect configuration, headings, local links and media, and no restaurant content.')

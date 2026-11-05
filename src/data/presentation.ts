@@ -22,7 +22,7 @@ export type PresentationSlide = {
 
 export const presentation = {
   title: 'A human-centered path from need to use',
-  subtitle: 'A portfolio walkthrough for Taiji Thomas, Digital Project Manager',
+  subtitle: 'Nicholas Bennett / engineering and support experience, moving into Customer Success',
   notice: '',
   slides: [
     {
@@ -116,7 +116,7 @@ export const presentation = {
     },
     {
       eyebrow: '06 / working together',
-      title: 'How I work with project managers.',
+      title: 'How I work across teams.',
       points: [
         { label: 'Clarify the brief', sample: 'I translate loose goals, inspiration, and constraints into a focused scope with decisions people can review.' },
         { label: 'Work in the real workflow', sample: 'I account for the tools, data, safety requirements, and handoffs people already rely on.' },
