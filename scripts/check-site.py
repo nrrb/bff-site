@@ -104,7 +104,7 @@ for project in linked_projects:
         url = urlsplit(href)
         assert url.scheme in ('http', 'https') and url.netloc, href
         assert href in pages['/'].links, f'Missing linked project: {href}'
-assert 'mailto:nicholas@bigfriendlyfunction.com' in pages['/'].links
+assert 'mailto:nicholas@nicholasbennett.work' in pages['/'].links
 assert '/#focus' in pages['/'].links
 assert {'resumes', 'services'} <= pages['/'].ids, 'Preserve old section anchors'
 assert 'Good with code. Even better with people.' in homepage_text

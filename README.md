@@ -1,8 +1,8 @@
 # Big Friendly Function
 
-Nicholas Bennett’s professional website, prepared for [nicholasbennett.work](https://nicholasbennett.work/) as its canonical domain. Built with Astro 4, React 18, TypeScript, and Tailwind CSS 3. Big Friendly Function remains the site's personality and branding.
+Nicholas Bennett’s professional website, prepared for [nicholasbennett.work](https://nicholasbennett.work/) as its canonical domain. Built with Astro 4, React 18, TypeScript, and Tailwind CSS 3. The wordmark is `NicholasBennett.work()`, with the site's Big Friendly Function personality preserved.
 
-The homepage introduces Nicholas's move from software engineering into Customer Success Management in cybersecurity and technical SaaS. It follows hero → three contribution areas → selected projects and more experiments → experience/approach → contact, preserving the real portrait, charcoal and rose styling, and function motif. It describes engineering and support experience, collaboration with Customer Success Managers, and community organizing without claiming a prior CSM title or commercial ownership. Contact remains the existing email link, with GitHub and LinkedIn profiles.
+The homepage introduces Nicholas's move from software engineering into Customer Success Management in cybersecurity and technical SaaS. It follows hero → three contribution areas → selected projects and more experiments → experience/approach → contact, preserving the real portrait, charcoal and rose styling, and function motif. It describes engineering and support experience, collaboration with Customer Success Managers, and community organizing without claiming a prior CSM title or commercial ownership. Contact uses `nicholas@nicholasbennett.work`, with GitHub and LinkedIn profiles.
 
 ## Site preview
 

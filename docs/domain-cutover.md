@@ -60,7 +60,7 @@ The newly assigned domain's exact targets and any ownership token require the au
 
 Remove conflicting **web records at `@` or `www` only**: old parking/URL Redirect records, A/AAAA records that Vercel does not request, or a record that conflicts with the new `www` CNAME. Do not remove email MX records, SPF/DKIM/DMARC TXT records, or unrelated subdomains. Do not use Namecheap's masked/iframe forwarding. Vercel handles the permanent HTTP redirects and TLS.
 
-The contact address stays `nicholas@bigfriendlyfunction.com`; a website-domain change does not create a new mailbox. Keep that domain registered and its email configuration active. No new email address has been invented.
+The site contact address is `nicholas@nicholasbennett.work`. Mailbox delivery is configured separately with the email provider; changing the website's email link does not provision a mailbox. Keep the old domain registered for its permanent website redirects.
 
 ## Verify after the approved deployment
 
