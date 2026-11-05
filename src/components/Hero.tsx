@@ -2,7 +2,7 @@ export default function Hero() {
   return <section id="top" className="section-shell pb-20 pt-16 md:pb-28 md:pt-24">
     <div className="grid items-center gap-12 md:grid-cols-[1.5fr_0.8fr]">
       <div>
-        <p className="eyebrow"><span className="text-rose">function</span> bigFriendlyFunction(you) <span className="text-rose">{'{'}</span></p>
+        <p className="eyebrow"><span className="text-rose">function</span> NicholasBennett.work() <span className="text-rose">{'{'}</span></p>
         <div className="pl-4 sm:pl-6">
           <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Good with code. <span className="text-rose">Even better with people.</span></h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-paper/80">I’m Nicholas Bennett, a Baltimore-based technical problem solver with a background in software engineering, cybersecurity, and 16 years of helping people navigate technology.</p>
